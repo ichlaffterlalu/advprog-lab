@@ -91,7 +91,7 @@ this Git repository. Run this command in your local Git repository:
 Example: `git config user.name "John Doe"` followed by
 `git config user.email example@gmail.com`
 2. If you are using PC in Fasilkom labs, you need to set HTTP proxy
-in Git configuration as well. Set the proxy by using this command: 
+in Git configuration as well. Set the proxy by using this command:
 `git config http.proxy 152.118.24.10:8080`
 3. If you want to set the configuration globally (i.e. for every Git
 repositories in your local machine and new local repositories in the
@@ -305,27 +305,27 @@ different content. One example is as follows:
 all of the following tasks, including Additional Tasks, you will be ready to
 do subsequent problem sets next week.**
 
-- [ ] Install all required tools
-- [ ] Create a local Git repository and make at least one commit
-- [ ] Create a new GitLab project
-- [ ] Make local Git repository synchronised with the online Git repository
+- [x] Install all required tools
+- [x] Create a local Git repository and make at least one commit
+- [x] Create a new GitLab project
+- [x] Make local Git repository synchronised with the online Git repository
 on the new GitLab project
     - Hint: `git push -u origin master`
-- [ ] Clone the Git repository from the new GitLab project to a different
+- [x] Clone the Git repository from the new GitLab project to a different
 directory (Hint: it should contain the same set of files that you have
 pushed before from the original directory)
-- [ ] Create a new branch other than `master` and make at least one commit
+- [x] Create a new branch other than `master` and make at least one commit
 in the new branch
-- [ ] Tell the teaching team your GitLab username and URL to your first
+- [x] Tell the teaching team your GitLab username and URL to your first
 repository via submission slot available on Scele
 
 ## Additional Tasks Checklist
 
-- [ ] Simulate a merge conflict and able to resolve it
+- [x] Simulate a merge conflict and able to resolve it
     - Hint: on a branch, try `git merge <BRANCH_NAME>` where
     `<BRANCH_NAME>` is the name of branch that you want to merge into
     currently active branch (e.g. `master`, `a-branch`, etc.)
-- [ ] Find a public Git repository on GitLab or GitHub and try
+- [x] Find a public Git repository on GitLab or GitHub and try
 to clone it to local machine
 
 ## Additional Resources
