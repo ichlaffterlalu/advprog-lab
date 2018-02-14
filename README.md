@@ -4,4 +4,4 @@ NPM: 1606895606
 
 Class: B
 
-Hobby: Reading Sci-Fi Novels
+Hobby: Programming, Reading Sci-Fi Novels
