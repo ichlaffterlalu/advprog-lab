@@ -2,8 +2,8 @@ package id.ac.ui.cs.advprog.tutorial1.strategy;
 
 public abstract class Duck {
 
-    private FlyBehavior flyBehavior;
-    private QuackBehavior quackBehavior;
+    FlyBehavior flyBehavior;
+    QuackBehavior quackBehavior;
 
     public void performFly() {
         flyBehavior.fly();
