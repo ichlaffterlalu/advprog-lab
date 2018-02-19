@@ -122,14 +122,14 @@ gradle checkstyleMain
 
 ## Mandatory Tasks Checklist
 
-- [ ] Make at least 1 commit that contains your progress in completing
+- [x] Make at least 1 commit that contains your progress in completing
 `strategy` pattern
-- [ ] Make at least 1 commit that contains your progress in completing
+- [x] Make at least 1 commit that contains your progress in completing
 `observer` pattern
-- [ ] Push your commits to online Git repository on your GitLab project
-- [ ] Fix `MiniDuckSimulator` program in `strategy` package
-- [ ] Pass all tests in `strategy` package
-- [ ] Pass all tests in `observer` package
+- [x] Push your commits to online Git repository on your GitLab project
+- [x] Fix `MiniDuckSimulator` program in `strategy` package
+- [x] Pass all tests in `strategy` package
+- [x] Pass all tests in `observer` package
 
 ## Additional Tasks Checklist
 
