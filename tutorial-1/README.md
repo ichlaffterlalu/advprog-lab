@@ -133,18 +133,18 @@ gradle checkstyleMain
 
 ## Additional Tasks Checklist
 
-- [ ] Make sure there are no code style issues, i.e. Checkstyle did not
+- [x] Make sure there are no code style issues, i.e. Checkstyle did not
 produce any warning when you execute `check` or `checkstyleMain` Gradle
 tasks
-- [ ] Implement all required methods correctly
+- [x] Implement all required methods correctly
     - **Hint: Make sure the implementation follows the example in Head First
     Design Pattern book!**
-- [ ] Describe another example of Strategy pattern you found in the wild, e.g.
+- [x] Describe another example of Strategy pattern you found in the wild, e.g.
 Java's standard library, 3rd party framework, etc., and write it in the
 provided space in this document (i.e. [My Notes](#my-notes) section)
     - **Reminder: Do not forget to `add`, `commit`, and `push` this document
     as well if you made some changes!**
-- [ ] Describe the difference between implementing Observer pattern by creating
+- [x] Describe the difference between implementing Observer pattern by creating
 your own Subject and Observer from scratch vs. reusing Java's `java.util.Observable`
 and `java.util.Observer`
     - Write your answer in [My Notes](#my-notes) section in this document
@@ -154,3 +154,21 @@ and `java.util.Observer`
 > Feel free to use this section to write your own notes related to your attempt
 > in doing the tutorial. You can also use this section to write text for
 > answering question(s) mentioned in the task checklists.
+#### 1. Another example of Strategy pattern
+
+Contoh Strategy pattern yang ada di core library Java adalah interface Comparable.
+Comparator, yang memiliki *method* compare() sebagai sifat utama, dan dapat digunakan
+untuk suatu struktur data sehingga data yang ada di dalam struktur data tersebut dapat
+dibandingkan dan diurutkan.
+
+Interface Comparator sendiri merupakan *abstract strategy*, sedangkan class-class Comparator
+yang dibuat sendiri oleh *user* merupakan *concrete strategies*.
+
+#### 2. Implementing Observer pattern from scratch vs. java.util.observer
+
+1. Observer pattern yang kita buat sendiri dapat disesuaikan dengan prinsip dasar
+*design pattern*, yaitu "Favor composition over inheritance", sedangkan Observer API
+di Java harus diimplementasikan sebagai subclass, karena bentuknya merupakan class,
+bukan interface.
+2. Method-method yang digunakan java.util.observer sifatnya protected, sehingga tidak
+bisa diimplementasikan ulang kecuali kita melakukan inherit kepada class yang kita buat.
