@@ -2,34 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4c1deae1-3dc6-47ca-9b06-6e0d3d69d8df" name="Default" comment="">
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/compiler.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__junit_junit_4_12.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__net_bytebuddy_byte_buddy_1_6_0.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__net_bytebuddy_byte_buddy_agent_1_6_0.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__org_apiguardian_apiguardian_api_1_0_0.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__org_hamcrest_hamcrest_core_1_3.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__org_junit_jupiter_junit_jupiter_api_5_1_0.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__org_junit_jupiter_junit_jupiter_engine_5_1_0.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__org_junit_platform_junit_platform_commons_1_1_0.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__org_junit_platform_junit_platform_engine_1_1_0.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__org_junit_platform_junit_platform_launcher_1_1_0.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__org_junit_vintage_junit_vintage_engine_5_1_0.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__org_mockito_mockito_core_2_5_4.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__org_objenesis_objenesis_2_4.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__org_opentest4j_opentest4j_1_0_0.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/modules.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/modules/-538468798/advprog-lab.iml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/modules/779806575/tutorial-1.iml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/modules/779806575/tutorial-1_main.iml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/modules/779806575/tutorial-1_test.iml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/modules/tutorial-2_main.iml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/modules/tutorial-2_test.iml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/tutorial-2.iml" />
-      <change beforePath="$PROJECT_DIR$/../tutorial-1/.idea/workspace.xml" afterPath="$PROJECT_DIR$/../tutorial-1/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/id/ac/ui/cs/advprog/tutorial2/exercise1/command/LightOffCommand.java" afterPath="$PROJECT_DIR$/src/main/java/id/ac/ui/cs/advprog/tutorial2/exercise1/command/LightOffCommand.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/id/ac/ui/cs/advprog/tutorial2/exercise1/command/LightOnCommand.java" afterPath="$PROJECT_DIR$/src/main/java/id/ac/ui/cs/advprog/tutorial2/exercise1/command/LightOnCommand.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/id/ac/ui/cs/advprog/tutorial2/exercise1/command/MacroCommand.java" afterPath="$PROJECT_DIR$/src/main/java/id/ac/ui/cs/advprog/tutorial2/exercise1/command/MacroCommand.java" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/id/ac/ui/cs/advprog/tutorial2/exercise1/receiver/CeilingFan.java" afterPath="$PROJECT_DIR$/src/main/java/id/ac/ui/cs/advprog/tutorial2/exercise1/receiver/CeilingFan.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/id/ac/ui/cs/advprog/tutorial2/exercise1/receiver/Light.java" afterPath="$PROJECT_DIR$/src/main/java/id/ac/ui/cs/advprog/tutorial2/exercise1/receiver/Light.java" />
     </list>
     <ignored path="$PROJECT_DIR$/../.gradle/" />
     <ignored path="$PROJECT_DIR$/../build/" />
@@ -73,11 +48,21 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="NoCommand.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="NoCommand.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/id/ac/ui/cs/advprog/tutorial2/exercise1/command/NoCommand.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="136">
               <caret line="8" column="0" lean-forward="true" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="CeilingFan.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/id/ac/ui/cs/advprog/tutorial2/exercise1/receiver/CeilingFan.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="549">
+              <caret line="52" column="0" lean-forward="true" selection-start-line="52" selection-start-column="0" selection-end-line="52" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -93,11 +78,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Light.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="Light.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/id/ac/ui/cs/advprog/tutorial2/exercise1/receiver/Light.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="158">
-              <caret line="15" column="23" lean-forward="true" selection-start-line="15" selection-start-column="23" selection-end-line="25" selection-end-column="33" />
+            <state relative-caret-position="243">
+              <caret line="20" column="19" lean-forward="false" selection-start-line="20" selection-start-column="19" selection-end-line="20" selection-end-column="19" />
               <folding />
             </state>
           </provider>
@@ -752,6 +737,8 @@
         <option value="$PROJECT_DIR$/src/main/java/id/ac/ui/cs/advprog/tutorial2/exercise1/command/LightOnCommand.java" />
         <option value="$PROJECT_DIR$/src/main/java/id/ac/ui/cs/advprog/tutorial2/exercise1/command/LightOffCommand.java" />
         <option value="$PROJECT_DIR$/src/main/java/id/ac/ui/cs/advprog/tutorial2/exercise1/command/MacroCommand.java" />
+        <option value="$PROJECT_DIR$/src/main/java/id/ac/ui/cs/advprog/tutorial2/exercise1/receiver/CeilingFan.java" />
+        <option value="$PROJECT_DIR$/src/main/java/id/ac/ui/cs/advprog/tutorial2/exercise1/receiver/Light.java" />
       </list>
     </option>
   </component>
@@ -1040,12 +1027,12 @@
       <option name="presentableId" value="Default" />
       <updated>1519355847208</updated>
       <workItem from="1519355848954" duration="631000" />
-      <workItem from="1519395606293" duration="549000" />
+      <workItem from="1519395606293" duration="803000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="1180000" />
+    <option name="totallyTimeSpent" value="1434000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
@@ -1182,14 +1169,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/id/ac/ui/cs/advprog/tutorial2/exercise1/receiver/Light.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="158">
-          <caret line="15" column="23" lean-forward="true" selection-start-line="15" selection-start-column="23" selection-end-line="25" selection-end-column="33" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/id/ac/ui/cs/advprog/tutorial2/exercise1/command/LightOnCommand.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="323">
@@ -1218,6 +1197,22 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="136">
           <caret line="8" column="0" lean-forward="true" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/id/ac/ui/cs/advprog/tutorial2/exercise1/receiver/CeilingFan.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="549">
+          <caret line="52" column="0" lean-forward="true" selection-start-line="52" selection-start-column="0" selection-end-line="52" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/id/ac/ui/cs/advprog/tutorial2/exercise1/receiver/Light.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="243">
+          <caret line="20" column="19" lean-forward="false" selection-start-line="20" selection-start-column="19" selection-end-line="20" selection-end-column="19" />
           <folding />
         </state>
       </provider>
