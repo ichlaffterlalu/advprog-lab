@@ -8,9 +8,11 @@ public class SimpleRemoteControl {
 
     public void setCommand(Command command) {
         // TODO Complete me!
+        this.slot = command;
     }
 
     public void buttonWasPressed() {
         // TODO Complete me!
+        slot.execute();
     }
 }
