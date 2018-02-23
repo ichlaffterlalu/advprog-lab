@@ -13,10 +13,12 @@ public class LightOffCommand implements Command {
     @Override
     public void execute() {
         // TODO Complete me!
+        light.off();
     }
 
     @Override
     public void undo() {
         // TODO Complete me!
+        light.on();
     }
 }
