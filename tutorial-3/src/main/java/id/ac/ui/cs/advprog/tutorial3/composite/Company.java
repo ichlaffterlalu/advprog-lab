@@ -17,13 +17,16 @@ public class Company {
 
     public void addEmployee(Employees employees) {
         //TODO Implement
+        employeesList.add(employees);
     }
 
     public double getNetSalaries() {
         //TODO Implement
+        return employeesList.stream().mapToDouble(e -> e.getSalary()).sum();
     }
 
     public List<Employees> getAllEmployees() {
         //TODO Implement
+        return employeesList;
     }
 }
