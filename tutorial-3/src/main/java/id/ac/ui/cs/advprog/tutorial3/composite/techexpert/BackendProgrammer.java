@@ -9,11 +9,21 @@ public class BackendProgrammer extends Employees {
     //TODO Implement
     public BackendProgrammer(String name, double salary) {
         if (salary < MINIMUM_SALARY) {
-            throw new IllegalArgumentException("Salary must be higher than or equals " + MINIMUM_SALARY);
+            throw new IllegalArgumentException("Salary must not below" + MINIMUM_SALARY);
         }
 
         this.name = name;
         this.salary = salary;
+    }
+
+    @Override
+    public String getName() {
+        return name;
+    }
+
+    @Override
+    public String getRole() {
+        return "Back End Programmer";
     }
 
     @Override

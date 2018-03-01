@@ -8,11 +8,21 @@ public class Ceo extends Employees {
     public Ceo(String name, double salary) {
         //TODO Implement
         if (salary < MINIMUM_SALARY) {
-            throw new IllegalArgumentException("Salary must be higher than or equals " + MINIMUM_SALARY);
+            throw new IllegalArgumentException("Salary must not below" + MINIMUM_SALARY);
         }
 
         this.name = name;
         this.salary = salary;
+    }
+
+    @Override
+    public String getName() {
+        return name;
+    }
+
+    @Override
+    public String getRole() {
+        return "CEO";
     }
 
     @Override
