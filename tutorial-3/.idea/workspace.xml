@@ -2,8 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4b7610be-02b4-45f2-a449-5aea02ef4670" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/src/main/java/id/ac/ui/cs/advprog/tutorial3/composite/Company.java" afterPath="$PROJECT_DIR$/src/main/java/id/ac/ui/cs/advprog/tutorial3/composite/Company.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/id/ac/ui/cs/advprog/tutorial3/decorator/filling/TomatoSauce.java" afterPath="$PROJECT_DIR$/src/main/java/id/ac/ui/cs/advprog/tutorial3/decorator/filling/TomatoSauce.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/id/ac/ui/cs/advprog/tutorial3/composite/higherups/Ceo.java" afterPath="$PROJECT_DIR$/src/main/java/id/ac/ui/cs/advprog/tutorial3/composite/higherups/Ceo.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/id/ac/ui/cs/advprog/tutorial3/composite/higherups/Cto.java" afterPath="$PROJECT_DIR$/src/main/java/id/ac/ui/cs/advprog/tutorial3/composite/higherups/Cto.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/id/ac/ui/cs/advprog/tutorial3/composite/techexpert/BackendProgrammer.java" afterPath="$PROJECT_DIR$/src/main/java/id/ac/ui/cs/advprog/tutorial3/composite/techexpert/BackendProgrammer.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/id/ac/ui/cs/advprog/tutorial3/composite/techexpert/FrontendProgrammer.java" afterPath="$PROJECT_DIR$/src/main/java/id/ac/ui/cs/advprog/tutorial3/composite/techexpert/FrontendProgrammer.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/id/ac/ui/cs/advprog/tutorial3/composite/techexpert/NetworkExpert.java" afterPath="$PROJECT_DIR$/src/main/java/id/ac/ui/cs/advprog/tutorial3/composite/techexpert/NetworkExpert.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/id/ac/ui/cs/advprog/tutorial3/composite/techexpert/SecurityExpert.java" afterPath="$PROJECT_DIR$/src/main/java/id/ac/ui/cs/advprog/tutorial3/composite/techexpert/SecurityExpert.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/id/ac/ui/cs/advprog/tutorial3/composite/techexpert/UiUxDesigner.java" afterPath="$PROJECT_DIR$/src/main/java/id/ac/ui/cs/advprog/tutorial3/composite/techexpert/UiUxDesigner.java" />
     </list>
     <ignored path="$PROJECT_DIR$/../.gradle/" />
     <ignored path="$PROJECT_DIR$/../build/" />
@@ -30,11 +35,31 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="Company.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/id/ac/ui/cs/advprog/tutorial3/composite/Company.java">
+      <file leaf-file-name="AdditionalCompanyTest.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/test/java/id/ac/ui/cs/advprog/tutorial3/composite/AdditionalCompanyTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="324">
-              <caret line="31" column="1" lean-forward="false" selection-start-line="31" selection-start-column="1" selection-end-line="31" selection-end-column="1" />
+            <state relative-caret-position="51">
+              <caret line="4" column="0" lean-forward="true" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="CompanyTest.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/test/java/id/ac/ui/cs/advprog/tutorial3/composite/CompanyTest.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="67">
+              <caret line="4" column="0" lean-forward="false" selection-start-line="4" selection-start-column="0" selection-end-line="5" selection-end-column="76" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="CeoTest.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/test/java/id/ac/ui/cs/advprog/tutorial3/composite/higherups/CeoTest.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="136">
+              <caret line="8" column="20" lean-forward="false" selection-start-line="8" selection-start-column="20" selection-end-line="8" selection-end-column="20" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -42,34 +67,74 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="TomatoSauce.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/id/ac/ui/cs/advprog/tutorial3/decorator/filling/TomatoSauce.java">
+      <file leaf-file-name="Ceo.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/id/ac/ui/cs/advprog/tutorial3/composite/higherups/Ceo.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="102">
-              <caret line="6" column="0" lean-forward="true" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
+            <state relative-caret-position="187">
+              <caret line="11" column="9" lean-forward="false" selection-start-line="11" selection-start-column="9" selection-end-line="11" selection-end-column="9" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Food.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/id/ac/ui/cs/advprog/tutorial3/decorator/Food.java">
+      <file leaf-file-name="Cto.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/id/ac/ui/cs/advprog/tutorial3/composite/higherups/Cto.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="85">
-              <caret line="5" column="0" lean-forward="false" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
+            <state relative-caret-position="187">
+              <caret line="11" column="9" lean-forward="false" selection-start-line="11" selection-start-column="9" selection-end-line="11" selection-end-column="9" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="BackendProgrammer.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/id/ac/ui/cs/advprog/tutorial3/composite/techexpert/BackendProgrammer.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="187">
+              <caret line="12" column="9" lean-forward="false" selection-start-line="12" selection-start-column="9" selection-end-line="12" selection-end-column="9" />
               <folding>
-                <element signature="e#171#172#0" expanded="true" />
-                <element signature="e#205#206#0" expanded="true" />
+                <element signature="e#648#649#0" expanded="true" />
+                <element signature="e#682#683#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Tomato.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/id/ac/ui/cs/advprog/tutorial3/decorator/filling/Tomato.java">
+      <file leaf-file-name="FrontendProgrammer.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/id/ac/ui/cs/advprog/tutorial3/composite/techexpert/FrontendProgrammer.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="341">
-              <caret line="21" column="8" lean-forward="true" selection-start-line="21" selection-start-column="8" selection-end-line="21" selection-end-column="34" />
+            <state relative-caret-position="187">
+              <caret line="11" column="9" lean-forward="false" selection-start-line="11" selection-start-column="9" selection-end-line="11" selection-end-column="9" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="NetworkExpert.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/id/ac/ui/cs/advprog/tutorial3/composite/techexpert/NetworkExpert.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="187">
+              <caret line="11" column="9" lean-forward="false" selection-start-line="11" selection-start-column="9" selection-end-line="11" selection-end-column="9" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="SecurityExpert.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/id/ac/ui/cs/advprog/tutorial3/composite/techexpert/SecurityExpert.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="187">
+              <caret line="11" column="9" lean-forward="false" selection-start-line="11" selection-start-column="9" selection-end-line="11" selection-end-column="9" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="UiUxDesigner.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/id/ac/ui/cs/advprog/tutorial3/composite/techexpert/UiUxDesigner.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="153">
+              <caret line="9" column="0" lean-forward="false" selection-start-line="9" selection-start-column="0" selection-end-line="11" selection-end-column="9" />
               <folding />
             </state>
           </provider>
@@ -886,15 +951,18 @@
         <option value="$PROJECT_DIR$/src/main/java/id/ac/ui/cs/advprog/tutorial3/decorator/filling/Cucumber.java" />
         <option value="$PROJECT_DIR$/src/main/java/id/ac/ui/cs/advprog/tutorial3/decorator/filling/Lettuce.java" />
         <option value="$PROJECT_DIR$/src/main/java/id/ac/ui/cs/advprog/tutorial3/decorator/filling/Tomato.java" />
-        <option value="$PROJECT_DIR$/src/main/java/id/ac/ui/cs/advprog/tutorial3/composite/higherups/Ceo.java" />
-        <option value="$PROJECT_DIR$/src/main/java/id/ac/ui/cs/advprog/tutorial3/composite/higherups/Cto.java" />
-        <option value="$PROJECT_DIR$/src/main/java/id/ac/ui/cs/advprog/tutorial3/composite/techexpert/BackendProgrammer.java" />
-        <option value="$PROJECT_DIR$/src/main/java/id/ac/ui/cs/advprog/tutorial3/composite/techexpert/FrontendProgrammer.java" />
-        <option value="$PROJECT_DIR$/src/main/java/id/ac/ui/cs/advprog/tutorial3/composite/techexpert/NetworkExpert.java" />
-        <option value="$PROJECT_DIR$/src/main/java/id/ac/ui/cs/advprog/tutorial3/composite/techexpert/SecurityExpert.java" />
-        <option value="$PROJECT_DIR$/src/main/java/id/ac/ui/cs/advprog/tutorial3/composite/techexpert/UiUxDesigner.java" />
         <option value="$PROJECT_DIR$/src/main/java/id/ac/ui/cs/advprog/tutorial3/composite/Company.java" />
         <option value="$PROJECT_DIR$/src/main/java/id/ac/ui/cs/advprog/tutorial3/decorator/filling/TomatoSauce.java" />
+        <option value="$PROJECT_DIR$/src/test/java/id/ac/ui/cs/advprog/tutorial3/composite/higherups/CeoTest.java" />
+        <option value="$PROJECT_DIR$/src/main/java/id/ac/ui/cs/advprog/tutorial3/composite/techexpert/UiUxDesigner.java" />
+        <option value="$PROJECT_DIR$/src/main/java/id/ac/ui/cs/advprog/tutorial3/composite/techexpert/SecurityExpert.java" />
+        <option value="$PROJECT_DIR$/src/main/java/id/ac/ui/cs/advprog/tutorial3/composite/techexpert/NetworkExpert.java" />
+        <option value="$PROJECT_DIR$/src/main/java/id/ac/ui/cs/advprog/tutorial3/composite/techexpert/FrontendProgrammer.java" />
+        <option value="$PROJECT_DIR$/src/main/java/id/ac/ui/cs/advprog/tutorial3/composite/techexpert/BackendProgrammer.java" />
+        <option value="$PROJECT_DIR$/src/main/java/id/ac/ui/cs/advprog/tutorial3/composite/higherups/Cto.java" />
+        <option value="$PROJECT_DIR$/src/main/java/id/ac/ui/cs/advprog/tutorial3/composite/higherups/Ceo.java" />
+        <option value="$PROJECT_DIR$/src/test/java/id/ac/ui/cs/advprog/tutorial3/composite/CompanyTest.java" />
+        <option value="$PROJECT_DIR$/src/test/java/id/ac/ui/cs/advprog/tutorial3/composite/AdditionalCompanyTest.java" />
       </list>
     </option>
   </component>
@@ -1002,38 +1070,6 @@
               <item name="tutorial3" type="462c0819:PsiDirectoryNode" />
               <item name="composite" type="462c0819:PsiDirectoryNode" />
               <item name="techexpert" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="tutorial-3" type="b2602c69:ProjectViewProjectNode" />
-              <item name="AP Lab" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="tutorial-3" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="tutorial3" type="462c0819:PsiDirectoryNode" />
-              <item name="decorator" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="tutorial-3" type="b2602c69:ProjectViewProjectNode" />
-              <item name="AP Lab" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="tutorial-3" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="tutorial3" type="462c0819:PsiDirectoryNode" />
-              <item name="decorator" type="462c0819:PsiDirectoryNode" />
-              <item name="bread" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="tutorial-3" type="b2602c69:ProjectViewProjectNode" />
-              <item name="AP Lab" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="tutorial-3" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="tutorial3" type="462c0819:PsiDirectoryNode" />
-              <item name="decorator" type="462c0819:PsiDirectoryNode" />
-              <item name="filling" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="tutorial-3" type="b2602c69:ProjectViewProjectNode" />
@@ -1257,15 +1293,16 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1519928008310</updated>
-      <workItem from="1519928014243" duration="2434000" />
+      <workItem from="1519928014243" duration="3061000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="2434000" />
+    <option name="totallyTimeSpent" value="3061000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -1280,7 +1317,7 @@
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24963397" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24963397" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="sbt-shell-toolwindow" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Build" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3296355" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
@@ -1433,22 +1470,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/id/ac/ui/cs/advprog/tutorial3/composite/higherups/Ceo.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="14" column="27" lean-forward="false" selection-start-line="14" selection-start-column="27" selection-end-line="14" selection-end-column="27" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/id/ac/ui/cs/advprog/tutorial3/composite/higherups/CeoTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="14" column="0" lean-forward="true" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/id/ac/ui/cs/advprog/tutorial3/composite/higherups/CtoTest.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="68">
@@ -1465,88 +1486,22 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/id/ac/ui/cs/advprog/tutorial3/composite/techexpert/BackendProgrammerTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="7" column="13" lean-forward="false" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/id/ac/ui/cs/advprog/tutorial3/composite/CompanyTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="86">
-          <caret line="66" column="62" lean-forward="true" selection-start-line="66" selection-start-column="62" selection-end-line="66" selection-end-column="62" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/id/ac/ui/cs/advprog/tutorial3/composite/techexpert/UiUxDesigner.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="10" column="0" lean-forward="true" selection-start-line="10" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/id/ac/ui/cs/advprog/tutorial3/composite/higherups/Cto.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="5" column="0" lean-forward="false" selection-start-line="5" selection-start-column="0" selection-end-line="15" selection-end-column="5" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/id/ac/ui/cs/advprog/tutorial3/composite/techexpert/SecurityExpert.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/id/ac/ui/cs/advprog/tutorial3/composite/techexpert/NetworkExpert.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/id/ac/ui/cs/advprog/tutorial3/composite/techexpert/FrontendProgrammer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/id/ac/ui/cs/advprog/tutorial3/composite/techexpert/BackendProgrammer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="17" column="0" lean-forward="true" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
-          <folding>
-            <element signature="e#432#433#0" expanded="true" />
-            <element signature="e#466#467#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/id/ac/ui/cs/advprog/tutorial3/composite/Company.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="324">
-          <caret line="31" column="1" lean-forward="false" selection-start-line="31" selection-start-column="1" selection-end-line="31" selection-end-column="1" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/id/ac/ui/cs/advprog/tutorial3/decorator/filling/Tomato.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="341">
           <caret line="21" column="8" lean-forward="true" selection-start-line="21" selection-start-column="8" selection-end-line="21" selection-end-column="34" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/id/ac/ui/cs/advprog/tutorial3/decorator/Food.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="8" column="0" lean-forward="true" selection-start-line="8" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
+          <folding>
+            <element signature="e#171#172#0" expanded="true" />
+            <element signature="e#205#206#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1558,14 +1513,114 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/id/ac/ui/cs/advprog/tutorial3/decorator/Food.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/id/ac/ui/cs/advprog/tutorial3/composite/Company.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="5" column="0" lean-forward="false" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
+        <state relative-caret-position="307">
+          <caret line="30" column="5" lean-forward="true" selection-start-line="30" selection-start-column="5" selection-end-line="30" selection-end-column="5" />
           <folding>
-            <element signature="e#171#172#0" expanded="true" />
-            <element signature="e#205#206#0" expanded="true" />
+            <element signature="imports" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/id/ac/ui/cs/advprog/tutorial3/decorator/bread/ThinBunBurgerTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="17" column="18" lean-forward="true" selection-start-line="17" selection-start-column="18" selection-end-line="17" selection-end-column="18" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/id/ac/ui/cs/advprog/tutorial3/composite/higherups/CeoTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="8" column="20" lean-forward="false" selection-start-line="8" selection-start-column="20" selection-end-line="8" selection-end-column="20" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/id/ac/ui/cs/advprog/tutorial3/composite/techexpert/BackendProgrammerTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="7" column="13" lean-forward="false" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/id/ac/ui/cs/advprog/tutorial3/composite/techexpert/UiUxDesigner.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="9" column="0" lean-forward="false" selection-start-line="9" selection-start-column="0" selection-end-line="11" selection-end-column="9" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/id/ac/ui/cs/advprog/tutorial3/composite/techexpert/SecurityExpert.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="11" column="9" lean-forward="false" selection-start-line="11" selection-start-column="9" selection-end-line="11" selection-end-column="9" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/id/ac/ui/cs/advprog/tutorial3/composite/techexpert/NetworkExpert.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="11" column="9" lean-forward="false" selection-start-line="11" selection-start-column="9" selection-end-line="11" selection-end-column="9" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/id/ac/ui/cs/advprog/tutorial3/composite/techexpert/FrontendProgrammer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="11" column="9" lean-forward="false" selection-start-line="11" selection-start-column="9" selection-end-line="11" selection-end-column="9" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/id/ac/ui/cs/advprog/tutorial3/composite/techexpert/BackendProgrammer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="12" column="9" lean-forward="false" selection-start-line="12" selection-start-column="9" selection-end-line="12" selection-end-column="9" />
+          <folding>
+            <element signature="e#648#649#0" expanded="true" />
+            <element signature="e#682#683#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/id/ac/ui/cs/advprog/tutorial3/composite/higherups/Cto.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="11" column="9" lean-forward="false" selection-start-line="11" selection-start-column="9" selection-end-line="11" selection-end-column="9" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/id/ac/ui/cs/advprog/tutorial3/composite/higherups/Ceo.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="11" column="9" lean-forward="false" selection-start-line="11" selection-start-column="9" selection-end-line="11" selection-end-column="9" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/id/ac/ui/cs/advprog/tutorial3/composite/CompanyTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="67">
+          <caret line="4" column="0" lean-forward="false" selection-start-line="4" selection-start-column="0" selection-end-line="5" selection-end-column="76" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/id/ac/ui/cs/advprog/tutorial3/composite/AdditionalCompanyTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="4" column="0" lean-forward="true" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
