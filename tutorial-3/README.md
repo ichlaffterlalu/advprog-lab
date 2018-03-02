@@ -63,7 +63,7 @@ of burger, sandwich, and it's filling:
 Your tasks in completing Decorator pattern implementation in this tutorial
 are as follow:
 
-1. Create a Class (or Complete if the Class is already available) for each Bread and Filling
+1. Create a Class (or Complete if the Class is already avtrailable) for each Bread and Filling
 that already mentioned above. 
 2. Create and Implement the required method `getDescription` and `getCost` to complete the
 Class. You can see Head First Design Pattern Book Chapter 3 as a guidance for method implementation. 
@@ -146,32 +146,32 @@ gradle :tutorial-3:checkstyleMain
 ## Mandatory Tasks Checklist
 
 - Decorator Pattern Checklist
-    - [ ] Make at least 1 commit that contains your progress in completing
+    - [x] Make at least 1 commit that contains your progress in completing
     Decorator pattern
-    - [ ] Push your commits to online Git repository on your GitLab project
-    - [ ] Complete the imeplementation over required Class
-    - [ ] Create a main class that demonstrate your implementation 
-    - [ ] Pass all test in `bread` and `filling` package
+    - [x] Push your commits to online Git repository on your GitLab project
+    - [x] Complete the imeplementation over required Class
+    - [x] Create a main class that demonstrate your implementation 
+    - [x] Pass all test in `bread` and `filling` package
 - Composite Pattern Checklist
-    - [ ] Make at least 1 commit that contains your progress in completing
+    - [x] Make at least 1 commit that contains your progress in completing
     Composite Method pattern
-    - [ ] Push your commits to online Git repository on your GitLab project
-    - [ ] Complete the implementation over required classes
-    - [ ] Create a main class that demonstrate your implementation
-    - [ ] Pass all test in `higherups` and `techexpert` package
+    - [x] Push your commits to online Git repository on your GitLab project
+    - [x] Complete the implementation over required classes
+    - [x] Create a main class that demonstrate your implementation
+    - [x] Pass all test in `higherups` and `techexpert` package
 
 ## Additional Tasks Checklist
 
-- [ ] Make sure there are no code style issues, i.e. Checkstyle did not
+- [x] Make sure there are no code style issues, i.e. Checkstyle did not
 produce any warning when you execute `check` or `checkstyleMain` Gradle
 tasks
 - Decorator Pattern Checklist
-    - [ ] Pass all tests in `MultipleFillingTest` Class
-    - [ ] Explain why decorator pattern is helpful in this particular problem set?
+    - [x] Pass all tests in `MultipleFillingTest` Class
+    - [x] Explain why decorator pattern is helpful in this particular problem set?
         - Write your answer in [My Notes](#my-notes) section in this document
 - Composite Pattern Checklist
-    - [ ] Pass all tests in `AdditionalCompanyTest` Class
-    - [ ] If you look carefully, both decorator and composite pattern have a same
+    - [x] Pass all tests in `AdditionalCompanyTest` Class
+    - [x] If you look carefully, both decorator and composite pattern have a same
     particular topic (creating an object that comes from two or more supporting object).
     Explain what is the difference between composite and decorator purpose.
         - Write your answer in [My Notes](#my-notes) section in this document
@@ -181,4 +181,26 @@ tasks
 
 > Feel free to use this section to write your own notes related to your attempt
 > in doing the tutorial. You can also use this section to write text for
-> answering question(s) mentioned in the task checklists.
+> answering question(s  ) mentioned in the task checklists.
+
+### Why use Decorator Pattern?
+Manfaat penggunaan decorator pada problem roti isi adalah:
+- Tidak perlu membuat objek filling dan menambahkannya secara eksplisit ke dalam
+  roti.
+- Class filling akan membungkus class bread sehingga mereka tidak perlu dianggap
+  sebagai dua objek yang berbeda, namun hanya bread yang diisi dengan filling,
+  dan tetap berperan sebagai bread.
+- Kelebihannya adalah, tidak perlu mengecek satu per satu harga bread dan isinya,
+  cukup memanggil method cost() pada bread, maka harga semua isinya akan dihitung
+  secara rekursif.
+
+### Composite vs. Decorator?
+Perbedaan terletak pada cara masing-masing pattern untuk membangun sebuah objek.
+- Composite membangun objek dari beberapa objek lain yang salin berinteraksi, 
+  disimpan dalam suatu struktur dan merupakan satu-kesatuan. Sehingga, apabila
+  salah satu objek diabaikan, maka tidak akan mewakilkan objek yang sama seperti
+  saat semuanya dianggap satu objek.
+- Decorator membangun objek dengan cara saling membungkus, dengan kata lain
+  menambah atribut atau fungsionalitas dari objek yang dibungkus. Apabila
+  pembungkus dihilangkan, sebenarnya objek tidak berubah, hanya saja ada beberapa
+  atribut yang akan hilang.
