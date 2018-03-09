@@ -127,32 +127,32 @@ gradle :tutorial-4:checkstyleMain
 
 ## Mandatory Tasks Checklist
 
-- [ ] Make at least 1 commit that contains your progress in completing
+- [x] Make at least 1 commit that contains your progress in completing
 Abstract Factory pattern
-- [ ] Make at least 1 commit that contains your progress in completing
+- [x] Make at least 1 commit that contains your progress in completing
 Singleton pattern
-- [ ] Push your commits to online Git repository on your GitLab project
-- [ ] Create a new ingredient class in `cheese`, `clam`, `dough`, `sauce`,
+- [x] Push your commits to online Git repository on your GitLab project
+- [x] Create a new ingredient class in `cheese`, `clam`, `dough`, `sauce`,
 and `veggies` package
-- [ ] Create a new `DepokPizzaIngredientFactory` class and implement it
+- [x] Create a new `DepokPizzaIngredientFactory` class and implement it
 correctly by following specifications described above
-- [ ] Create a new `DepokPizzaStore` class and implement it correctly by
+- [x] Create a new `DepokPizzaStore` class and implement it correctly by
 following specifications described above
-- [ ] Implement `Singleton` class correctly
-- [ ] Pass all tests related to Singleton class
+- [x] Implement `Singleton` class correctly
+- [x] Pass all tests related to Singleton class
 
 ## Additional Tasks Checklist
 
-- [ ] Make sure there are no code style issues, i.e. Checkstyle did not
+- [x] Make sure there are no code style issues, i.e. Checkstyle did not
 produce any warning when you execute `check` or `checkstyleMain` Gradle
 tasks
-- [ ] Create several JUnit 4-based unit test classes (and the test cases,
+- [x] Create several JUnit 4-based unit test classes (and the test cases,
 obviously) **that cover at least 50% lines of code** in `exercise1` package
     - Hint: Please see unit tests in 1st and 3rd tutorial to see the overall
     structure of developing JUnit 4-based unit tests
     - You can check the code coverage using your IDE, e.g. in IntelliJ, you can
     right-click the test package and choose *Run All Tests with Coverage*
-- [ ] Compare lazy-instantiation and eager-instantiation approach in instantiating
+- [x] Compare lazy-instantiation and eager-instantiation approach in instantiating
 a Singleton object and describe the pros/cons of both approaches
     - Write your answer in [My Notes](#my-notes) section in this document
 
@@ -161,3 +161,16 @@ a Singleton object and describe the pros/cons of both approaches
 > Feel free to use this section to write your own notes related to your attempt
 > in doing the tutorial. You can also use this section to write text for
 > answering question(s) mentioned in the task checklists.
+
+### Lazy Instantiation vs. Eager Instantiation
+- Lazy instantiation hanya membuat objek ketika diperlukan, dengan cara mengecek
+  request dari program.
+  - Plus: Menghemat memori karena objek baru tidak selalu dibuat
+  - Minus: Membutuhkan logic tambahan, yaitu mengecek apakah objek sudah dibuat
+    atau belum. Sehingga, kurang efektif jika penggunaan memori objek tersebut kecil.
+- Eager instantiation membuat onjek langsung pada saat class dipanggil dan
+  menyimpannya di instance variable, sehingga apabila dibutuhkan, bisa langsung
+  return objek yang bersangkutan.
+  - Plus: Lebih praktis terutama ketika penggunaan memori objek tersebut kecil.
+  - Minus: Boros memori karena belum tentu objek yang langsung dibuat tersebut
+    digunakan oleh program.
