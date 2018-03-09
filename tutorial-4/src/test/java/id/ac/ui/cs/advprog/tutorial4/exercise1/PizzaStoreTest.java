@@ -50,4 +50,9 @@ public class PizzaStoreTest {
         Pizza veggiePizza = pizzaStore.orderPizza("veggie");
         assertEquals("Depok Style Veggie Pizza", veggiePizza.getName());
     }
+
+    @Test
+    public void testPizzaTestDriveHasMainMethod() {
+        PizzaTestDrive.main(new String[0]);
+    }
 }
