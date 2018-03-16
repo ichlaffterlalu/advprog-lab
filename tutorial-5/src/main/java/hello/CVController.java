@@ -21,7 +21,7 @@ public class CVController {
             model.addAttribute("visitorMessage", "This is my CV");
         }
         else {
-            model.addAttribute("visitorMessage", visitor+", I hope youre interested to hire me");
+            model.addAttribute("visitorMessage", visitor+", I hope you're interested to hire me");
         }
         buildAttrs();
         model.addAllAttributes(cvInformations);
@@ -33,7 +33,7 @@ public class CVController {
         cvInformations.put("owner", "Ichlasul Affan");
         cvInformations.put("birthDate", "12 March 1999");
         cvInformations.put("birthPlace", "Padang");
-        cvInformations.put("address", "Perumahan Bukit Dago, A1/10, Rawakalong, Gunung Sindur," +
+        cvInformations.put("address", "Perumahan Bukit Dago, A1/10, Rawakalong, Gunung Sindur, " +
                 "Bogor, West Java, Indonesia 16340");
         cvInformations.put("elemSchool", "SD Islam Al-Amanah Bakti Jaya");
         cvInformations.put("midSchool", "MTsN Tangerang II Pamulang");
