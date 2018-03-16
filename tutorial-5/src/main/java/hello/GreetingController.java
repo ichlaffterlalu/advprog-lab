@@ -10,7 +10,7 @@ public class GreetingController {
 
     @GetMapping("/greeting")
     public String greeting(@RequestParam(name = "name", required = true)
-                                       String name, Model model) {
+                                   String name, Model model) {
         model.addAttribute("name", name);
         return "greeting";
     }

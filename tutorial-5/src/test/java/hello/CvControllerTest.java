@@ -13,8 +13,8 @@ import org.springframework.test.context.junit4.SpringRunner;
 import org.springframework.test.web.servlet.MockMvc;
 
 @RunWith(SpringRunner.class)
-@WebMvcTest(controllers = CVController.class)
-public class CVControllerTest {
+@WebMvcTest(controllers = CvController.class)
+public class CvControllerTest {
 
     @Autowired
     private MockMvc mockMvc;
@@ -22,7 +22,8 @@ public class CVControllerTest {
     @Test
     public void cvWithVisitor() throws Exception {
         mockMvc.perform(get("/cv").param("visitor", "Arief"))
-                .andExpect(content().string(containsString("Arief, I hope you&#39;re interested to hire me")))
+                .andExpect(content().string(containsString("Arief, I hope you&#39;re"
+                        + " interested to hire me")))
                 .andExpect(content().string(not("This is my CV")));
     }
 
@@ -41,68 +42,68 @@ public class CVControllerTest {
     }
 
     @Test
-    public void checkCVFullName() throws Exception {
+    public void checkCvFullName() throws Exception {
         mockMvc.perform(get("/cv"))
                 .andExpect(content().string(containsString("Ichlasul Affan")))
                 .andExpect(content().string(not("Okita Souji")));
     }
 
     @Test
-    public void checkCVBirthDate() throws Exception {
+    public void checkCvBirthDate() throws Exception {
         mockMvc.perform(get("/cv"))
                 .andExpect(content().string(containsString("12 March 1999")))
                 .andExpect(content().string(not("22 January 2000")));
     }
 
     @Test
-    public void checkCVBirthPlace() throws Exception {
+    public void checkCvBirthPlace() throws Exception {
         mockMvc.perform(get("/cv"))
                 .andExpect(content().string(containsString("Padang")))
                 .andExpect(content().string(not("Brisbane")));
     }
 
     @Test
-    public void checkCVAddress() throws Exception {
+    public void checkCvAddress() throws Exception {
         mockMvc.perform(get("/cv"))
-                .andExpect(content().string(containsString("Perumahan Bukit Dago, A1/10, " +
-                        "Rawakalong, Gunung Sindur, Bogor, West Java, Indonesia 16340")))
+                .andExpect(content().string(containsString("Perumahan Bukit Dago, A1/10, "
+                        + "Rawakalong, Gunung Sindur, Bogor, West Java, Indonesia 16340")))
                 .andExpect(content().string(not("Sesame Street")));
     }
 
     @Test
-    public void checkCVElementarySchool() throws Exception {
+    public void checkCvElementarySchool() throws Exception {
         mockMvc.perform(get("/cv"))
                 .andExpect(content().string(containsString("SD Islam Al-Amanah Bakti Jaya")))
                 .andExpect(content().string(not("Pythonia Park")));
     }
 
     @Test
-    public void checkCVMiddleSchool() throws Exception {
+    public void checkCvMiddleSchool() throws Exception {
         mockMvc.perform(get("/cv"))
                 .andExpect(content().string(containsString("MTsN Tangerang II Pamulang")))
                 .andExpect(content().string(not("SMP Negeri 1 Kota Tangerang Selatan")));
     }
 
     @Test
-    public void checkCVHighSchool() throws Exception {
+    public void checkCvHighSchool() throws Exception {
         mockMvc.perform(get("/cv"))
                 .andExpect(content().string(containsString("MAN Serpong")))
                 .andExpect(content().string(not("SMA Negeri 2 Kota Tangerang Selatan")));
     }
 
     @Test
-    public void checkCVUniversity() throws Exception {
+    public void checkCvUniversity() throws Exception {
         mockMvc.perform(get("/cv"))
                 .andExpect(content().string(containsString("University of Indonesia")))
                 .andExpect(content().string(not("Oxford University")));
     }
 
     @Test
-    public void checkCVEssay() throws Exception {
-        String goodEssay = "I am 19 years old. Currently pursuing my Computer Science " +
-                "bachelor degree at University of Indonesia. Interested in network " +
-                "security and operating systems. I have experiences in teaching assistant " +
-                "of Foundations of Programming. Also interested in front end web development.";
+    public void checkCvEssay() throws Exception {
+        String goodEssay = "I am 19 years old. Currently pursuing my Computer Science "
+                + "bachelor degree at University of Indonesia. Interested in network "
+                + "security and operating systems. I have experiences in teaching assistant "
+                + "of Foundations of Programming. Also interested in front end web development.";
         String badEssay = "I have four cats.";
 
         mockMvc.perform(get("/cv"))
