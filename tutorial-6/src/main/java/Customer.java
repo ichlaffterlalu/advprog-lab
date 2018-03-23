@@ -44,6 +44,22 @@ class Customer {
         return result;
     }
 
+    public String htmlStatement() {
+        Iterator<Rental> iterator = rentals.iterator();
+        String result = "<h1>Rentals for <em>" + getName() + "</em></h1><p>\n";
+
+        while (iterator.hasNext()) {
+            Rental each = iterator.next();
+            result += each.getMovie().getTitle() + ": " +
+                    String.valueOf(each.getCharge()) + "<br>\n";
+        }
+        result +=  "<p>You owe <em>" + String.valueOf(getTotalCharge()) + "</em><p>\n";
+        result += "On this rental you earned <em>" +
+                String.valueOf(getTotalFrequentRenterPoints()) +
+                "</em> frequent renter points<p>";
+        return result;
+    }
+
     private double getTotalCharge() {
         double result = 0;
         Iterator<Rental> iterator = rentals.iterator();
