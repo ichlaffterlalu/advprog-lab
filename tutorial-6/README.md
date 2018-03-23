@@ -129,23 +129,23 @@ gradle :tutorial-6:checkstyleTest
 
 ## Mandatory Tasks Checklist
 
-- [ ] Refactor `statement()` method in `Customer` class
-- [ ] Make at least 3 commits that contains your progress in refactoring
+- [x] Refactor `statement()` method in `Customer` class
+- [x] Make at least 3 commits that contains your progress in refactoring
 `statement()` method in `Customer` class
-- [ ] Refactor test classes
-- [ ] Make at least 1 commit that contains your progress in refactoring
+- [x] Refactor test classes
+- [x] Make at least 1 commit that contains your progress in refactoring
 test classes
-- [ ] Ensure the tests still pass after each refactoring
-- [ ] Push your commits to online Git repository on your GitLab project
+- [x] Ensure the tests still pass after each refactoring
+- [x] Push your commits to online Git repository on your GitLab project
 
 ## Additional Tasks Checklist
 
-- [ ] Make sure there are no code style issues, both in production code and
+- [x] Make sure there are no code style issues, both in production code and
 test code
-- [ ] Implement `htmlStatement()` method in `Customer` class
-- [ ] Create tests for testing `htmlStatement()` method using JUnit 4
-- [ ] Ensure 100% code coverage
-- [ ] Reflect on the refactoring activities that you have done and answer the
+- [x] Implement `htmlStatement()` method in `Customer` class
+- [x] Create tests for testing `htmlStatement()` method using JUnit 4
+- [x] Ensure 100% code coverage
+- [x] Reflect on the refactoring activities that you have done and answer the
 following questions:
     - What are the benefits of refactoring based on your observation?
     - What are the bad qualities observed in the code if we did not refactor
@@ -160,3 +160,11 @@ following questions:
 > Feel free to use this section to write your own notes related to your attempt
 > in doing the tutorial. You can also use this section to write text for
 > answering question(s) mentioned in the task checklists.
+
+- Refactoring berguna untuk mempertahankan *readability* struktur kode, dan juga
+  mempertahankan orisinalitas dari fungsi yang sudah ada, apabila akan ditambahkan
+  fitur baru atau melakukan *bug patching*, dan mempertahankan *code reusability*.
+- Duplikasi kode, method yang penggunaannya kurang tepat, dan kode yang tidak efektif.
+- Kode menjadi boros, sehingga membuat 2 iterator berbeda untuk satu fungsi yang sama.
+  Method tersebut menjadi panjang, meskipun mereka melakukan hal yang sama dengan
+  hesil yang sedikit berbeda.

@@ -32,8 +32,8 @@ class Customer {
             frequentRenterPoints = each.getFrequentRenterPoints();
 
             // Show figures for this rental
-            result += "\t" + each.getMovie().getTitle() + "\t" +
-                    String.valueOf(thisAmount) + "\n";
+            result += "\t" + each.getMovie().getTitle() + "\t"
+                    + String.valueOf(thisAmount) + "\n";
         }
 
         // Add footer lines
@@ -50,13 +50,13 @@ class Customer {
 
         while (iterator.hasNext()) {
             Rental each = iterator.next();
-            result += each.getMovie().getTitle() + ": " +
-                    String.valueOf(each.getCharge()) + "<br>\n";
+            result += each.getMovie().getTitle() + ": "
+                    + String.valueOf(each.getCharge()) + "<br>\n";
         }
         result +=  "<p>You owe <em>" + String.valueOf(getTotalCharge()) + "</em><p>\n";
-        result += "On this rental you earned <em>" +
-                String.valueOf(getTotalFrequentRenterPoints()) +
-                "</em> frequent renter points<p>";
+        result += "On this rental you earned <em>"
+                + String.valueOf(getTotalFrequentRenterPoints())
+                + "</em> frequent renter points<p>";
         return result;
     }
 
@@ -70,7 +70,7 @@ class Customer {
         return result;
     }
 
-    private int getTotalFrequentRenterPoints(){
+    private int getTotalFrequentRenterPoints() {
         int result = 0;
         Iterator<Rental> iterator = rentals.iterator();
         while (iterator.hasNext()) {
