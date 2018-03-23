@@ -32,5 +32,29 @@ public class CustomerTest {
     // TODO Implement me!
     public void statementWithMultipleMovies() {
         // TODO Implement me!
+        Movie movie = new Movie("Ninja Hattori", Movie.CHILDREN);
+        Rental rent = new Rental(movie, 7);
+        Customer customer = new Customer("Safira");
+        customer.addRental(rent);
+
+        String result = customer.statement();
+        String[] lines = result.split("\n");
+
+        assertEquals(4, lines.length);
+        assertTrue(result.contains("Amount owed is 7.5"));
+        assertTrue(result.contains("1 frequent renter points"));
+
+
+        movie = new Movie("Ready Player One", Movie.NEW_RELEASE);
+        rent = new Rental(movie, 10);
+        customer = new Customer("Parzival");
+        customer.addRental(rent);
+
+        result = customer.statement();
+        lines = result.split("\n");
+
+        assertEquals(4, lines.length);
+        assertTrue(result.contains("Amount owed is 30.0"));
+        assertTrue(result.contains("2 frequent renter points"));
     }
 }
