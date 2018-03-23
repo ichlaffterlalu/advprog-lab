@@ -1,24 +1,33 @@
-import org.junit.Test;
+import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertTrue;
 
-import static org.junit.Assert.*;
+import org.junit.Before;
+import org.junit.Test;
 
 public class CustomerTest {
 
     // TODO: Remove redundancy in setting up test fixture in each test methods
     // Hint: Make the test fixture into an instance variable
 
+    Customer customer;
+    Movie movie;
+    Movie movie2;
+    Rental rent;
+
+    @Before
+    public void setUp() {
+        customer = new Customer("Alice");
+        movie = new Movie("Who Killed Captain Alex?", Movie.REGULAR);
+        rent = new Rental(movie, 3);
+    }
+
     @Test
     public void getName() {
-        Customer customer = new Customer("Alice");
-
         assertEquals("Alice", customer.getName());
     }
 
     @Test
     public void statementWithSingleMovie() {
-        Movie movie = new Movie("Who Killed Captain Alex?", Movie.REGULAR);
-        Rental rent = new Rental(movie, 3);
-        Customer customer = new Customer("Alice");
         customer.addRental(rent);
 
         String result = customer.statement();
@@ -29,23 +38,8 @@ public class CustomerTest {
         assertTrue(result.contains("1 frequent renter points"));
     }
 
-    @Test
-    public void htmlStatementWithSingleMovie() {
-        Movie movie = new Movie("Who Killed Captain Alex?", Movie.REGULAR);
-        Rental rent = new Rental(movie, 3);
-        Customer customer = new Customer("Alice");
-        customer.addRental(rent);
-
-        String result = customer.htmlStatement();
-        String[] lines = result.split("\n");
-
-        assertEquals(4, lines.length);
-        assertTrue(result.contains("You owe <em>3.5</em>"));
-        assertTrue(result.contains("<em>1</em> frequent renter points"));
-    }
-
     // TODO Implement me!
-    public void statementWithMultipleMovies() {
+    public void statementWithMultipleMoviesTest() {
         // TODO Implement me!
         Movie movie = new Movie("Ninja Hattori", Movie.CHILDREN);
         Rental rent = new Rental(movie, 7);
@@ -73,7 +67,7 @@ public class CustomerTest {
         assertTrue(result.contains("2 frequent renter points"));
     }
 
-    public void htmlStatementWithMultipleMovies() {
+    public void htmlStatementTest() {
         // TODO Implement me!
         Movie movie = new Movie("Ninja Hattori", Movie.CHILDREN);
         Rental rent = new Rental(movie, 7);
