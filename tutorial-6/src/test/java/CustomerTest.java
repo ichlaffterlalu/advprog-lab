@@ -29,6 +29,21 @@ public class CustomerTest {
         assertTrue(result.contains("1 frequent renter points"));
     }
 
+    @Test
+    public void htmlStatementWithSingleMovie() {
+        Movie movie = new Movie("Who Killed Captain Alex?", Movie.REGULAR);
+        Rental rent = new Rental(movie, 3);
+        Customer customer = new Customer("Alice");
+        customer.addRental(rent);
+
+        String result = customer.htmlStatement();
+        String[] lines = result.split("\n");
+
+        assertEquals(4, lines.length);
+        assertTrue(result.contains("You owe <em>3.5</em>"));
+        assertTrue(result.contains("<em>1</em> frequent renter points"));
+    }
+
     // TODO Implement me!
     public void statementWithMultipleMovies() {
         // TODO Implement me!
@@ -56,5 +71,33 @@ public class CustomerTest {
         assertEquals(4, lines.length);
         assertTrue(result.contains("Amount owed is 30.0"));
         assertTrue(result.contains("2 frequent renter points"));
+    }
+
+    public void htmlStatementWithMultipleMovies() {
+        // TODO Implement me!
+        Movie movie = new Movie("Ninja Hattori", Movie.CHILDREN);
+        Rental rent = new Rental(movie, 7);
+        Customer customer = new Customer("Safira");
+        customer.addRental(rent);
+
+        String result = customer.htmlStatement();
+        String[] lines = result.split("\n");
+
+        assertEquals(4, lines.length);
+        assertTrue(result.contains("You owe <em> 7.5</em>"));
+        assertTrue(result.contains("<em>1</em> frequent renter points"));
+
+
+        movie = new Movie("Ready Player One", Movie.NEW_RELEASE);
+        rent = new Rental(movie, 10);
+        customer = new Customer("Parzival");
+        customer.addRental(rent);
+
+        result = customer.htmlStatement();
+        lines = result.split("\n");
+
+        assertEquals(4, lines.length);
+        assertTrue(result.contains("You owe <em>30.0</em>"));
+        assertTrue(result.contains("<em>2</em> frequent renter points"));
     }
 }
