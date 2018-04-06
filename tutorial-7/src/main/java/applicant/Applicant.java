@@ -7,10 +7,6 @@ import java.util.function.Predicate;
  */
 public class Applicant {
 
-    public boolean isCredible() {
-        return true;
-    }
-
     public int getCreditScore() {
         return 700;
     }
