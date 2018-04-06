@@ -1,4 +1,5 @@
 import java.util.stream.IntStream;
+
 /**
  * 1st exercise.
  */

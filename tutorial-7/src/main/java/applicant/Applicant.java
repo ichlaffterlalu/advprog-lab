@@ -7,18 +7,6 @@ import java.util.function.Predicate;
  */
 public class Applicant {
 
-    public int getCreditScore() {
-        return 700;
-    }
-
-    public int getEmploymentYears() {
-        return 10;
-    }
-
-    public boolean hasCriminalRecord() {
-        return true;
-    }
-
     public static boolean evaluate(Applicant applicant, Predicate<Applicant> evaluator) {
         return evaluator.test(applicant);
     }
@@ -51,5 +39,17 @@ public class Applicant {
                         .and(creditEvaluator)
                         .and(criminalEvaluator)));
 
+    }
+
+    public int getCreditScore() {
+        return 700;
+    }
+
+    public int getEmploymentYears() {
+        return 10;
+    }
+
+    public boolean hasCriminalRecord() {
+        return true;
     }
 }

@@ -1,10 +1,8 @@
 import static org.junit.Assert.assertTrue;
 
 import java.util.HashMap;
-import java.util.Map;
-
 import java.util.List;
-
+import java.util.Map;
 import org.junit.BeforeClass;
 import org.junit.Test;
 
@@ -16,13 +14,13 @@ public class ScoreGroupingTest {
 
     @BeforeClass
     public static void setUp() {
-        SCORES.put("Areng",10);
-        SCORES.put("Rey",15);
-        SCORES.put("Adri",15);
-        SCORES.put("Agas",11);
-        SCORES.put("Ayaz",15);
-        SCORES.put("Ridwan",10);
-        SCORES.put("Naomi",-5);
+        SCORES.put("Areng", 10);
+        SCORES.put("Rey", 15);
+        SCORES.put("Adri", 15);
+        SCORES.put("Agas", 11);
+        SCORES.put("Ayaz", 15);
+        SCORES.put("Ridwan", 10);
+        SCORES.put("Naomi", -5);
     }
 
     @Test

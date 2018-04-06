@@ -2,11 +2,10 @@ package applicant;
 
 import static applicant.Applicant.evaluate;
 import static applicant.Applicant.main;
-import static junit.framework.Assert.assertFalse;
-import static junit.framework.TestCase.assertTrue;
+import static org.junit.Assert.assertFalse;
+import static org.junit.Assert.assertTrue;
 
 import java.util.function.Predicate;
-
 import org.junit.Test;
 
 public class ApplicantTest {
