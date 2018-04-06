@@ -139,26 +139,26 @@ gradle :tutorial-7:jacocoTestReport
 
 ## Mandatory Tasks Checklist
 
-- [ ] Make sure that you have at least 1 commit for each exercises that contain
+- [x] Make sure that you have at least 1 commit for each exercises that contain
 changes to the code after refactoring
-- [ ] Complete 1st exercise
-- [ ] Complete 2nd exercise
-- [ ] Complete 3rd exercise
-- [ ] Complete 4th exercise
-- [ ] Ensure the tests still pass after each refactoring
-- [ ] Push your commits to online Git repository on your GitLab project
+- [x] Complete 1st exercise
+- [x] Complete 2nd exercise
+- [x] Complete 3rd exercise
+- [x] Complete 4th exercise
+- [x] Ensure the tests still pass after each refactoring
+- [x] Push your commits to online Git repository on your GitLab project
 
 ## Additional Tasks Checklist
 
-- [ ] Make sure there are no code style issues, both in production code and
+- [x] Make sure there are no code style issues, both in production code and
 test code
-- [ ] Ensure 100% code coverage on all methods except `main` method after all
+- [x] Ensure 100% code coverage on all methods except `main` method after all
 code has been refactored
-- [ ] Compare the number of LOC before and after refactoring and provide
+- [x] Compare the number of LOC before and after refactoring and provide
 a short analysis on the result
     - Write your analysis report in [My Notes](#my-notes) section in this
     document
-- [ ] Write a paragraph that describe your experience in refactoring codebase
+- [x] Write a paragraph that describe your experience in refactoring codebase
 into functional style
     - You are allowed to write more than the required paragraph
     - Write your answer in [My Notes](#my-notes) section in this document
@@ -168,3 +168,18 @@ into functional style
 > Feel free to use this section to write your own notes related to your attempt
 > in doing the tutorial. You can also use this section to write text for
 > answering question(s) mentioned in the task checklists.
+
+### Analysis
+1. Secara jumlah baris kode, penggunaan konsep *functional programming* memiliki
+   dampak (mempersingkat kode) sangat signifikan, karena hanya memanggil method-
+   method dari library yang sudah tersedia.
+2. Keterbacaan (*readability*) kode juga menjadi lebih baik karena kompleksitas
+   algoritma telah terenkapsulasi sehingga pembaca kode hanya perlu tahu apa yang
+   dilakukan, tanpa mengetahui bagaimana cara melakukannya.
+   
+### Terkait pengalaman refactoring
+Hal yang menarik sewaktu menjalankan refactoring adalah sebagian besar waktu digunakan
+untuk mempelajari API dan library-library, serta pattern dan functional style.
+Sedangkan ketika sudah memahami hal-hal tersebut, implementasi yang dilakukan
+tidak memakan waktu lama. Perkiraan kasarnya, 80% waktu digunakan untuk mempelajari
+pattern refactoring yang akan digunakan, dan 20% untuk implementasi refactoring.
