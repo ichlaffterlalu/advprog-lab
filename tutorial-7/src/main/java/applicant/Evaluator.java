@@ -1,6 +1,7 @@
 package applicant;
 
-public interface Evaluator {
+import java.util.function.Predicate;
 
-    boolean evaluate(Applicant applicant);
+public interface Evaluator {
+    Predicate<Applicant> getEvaluator();
 }

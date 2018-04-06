@@ -1,16 +1,9 @@
 package applicant;
 
-public class CreditEvaluator extends EvaluatorChain {
+import java.util.function.Predicate;
 
-    public CreditEvaluator(Evaluator next) {
-        super(next);
-    }
-
-    public boolean evaluate(Applicant applicant) {
-        if (applicant.getCreditScore() > 600) {
-            return super.evaluate(applicant);
-        }
-
-        return false;
+public class CreditEvaluator implements Evaluator {
+    public Predicate<Applicant> getEvaluator() {
+        return apc -> apc.getCreditScore() > 600;
     }
 }

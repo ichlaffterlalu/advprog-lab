@@ -1,16 +1,9 @@
 package applicant;
 
-public class EmploymentEvaluator extends EvaluatorChain {
+import java.util.function.Predicate;
 
-    public EmploymentEvaluator(Evaluator next) {
-        super(next);
-    }
-
-    public boolean evaluate(Applicant applicant) {
-        if (applicant.getEmploymentYears() > 0) {
-            return super.evaluate(applicant);
-        }
-
-        return false;
+public class EmploymentEvaluator implements Evaluator {
+    public Predicate<Applicant> getEvaluator() {
+        return apc -> apc.getEmploymentYears() > 0;
     }
 }

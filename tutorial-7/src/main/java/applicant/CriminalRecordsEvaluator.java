@@ -1,16 +1,9 @@
 package applicant;
 
-public class CriminalRecordsEvaluator extends EvaluatorChain {
+import java.util.function.Predicate;
 
-    public CriminalRecordsEvaluator(Evaluator next) {
-        super(next);
-    }
-
-    public boolean evaluate(Applicant applicant) {
-        if (!applicant.hasCriminalRecord()) {
-            return super.evaluate(applicant);
-        }
-
-        return false;
+public class CriminalRecordsEvaluator implements Evaluator {
+    public Predicate<Applicant> getEvaluator() {
+        return apc -> !apc.hasCriminalRecord();
     }
 }

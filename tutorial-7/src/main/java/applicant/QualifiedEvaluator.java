@@ -1,8 +1,9 @@
 package applicant;
 
-public class QualifiedEvaluator implements Evaluator {
+import java.util.function.Predicate;
 
-    public boolean evaluate(Applicant applicant) {
-        return applicant.isCredible();
+public class QualifiedEvaluator implements Evaluator {
+    public Predicate<Applicant> getEvaluator() {
+        return apc -> apc.getEmploymentYears() > 0;
     }
 }

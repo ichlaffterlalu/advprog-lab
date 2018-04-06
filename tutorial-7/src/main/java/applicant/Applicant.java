@@ -1,5 +1,7 @@
 package applicant;
 
+import java.util.function.Predicate;
+
 /**
  * 4th exercise.
  */
@@ -21,8 +23,8 @@ public class Applicant {
         return true;
     }
 
-    public static boolean evaluate(Applicant applicant, Evaluator evaluator) {
-        return evaluator.evaluate(applicant);
+    public static boolean evaluate(Applicant applicant, Predicate<Applicant> evaluator) {
+        return evaluator.test(applicant);
     }
 
     private static void printEvaluation(boolean result) {
@@ -34,15 +36,24 @@ public class Applicant {
 
     public static void main(String[] args) {
         Applicant applicant = new Applicant();
-        printEvaluation(evaluate(applicant, new CreditEvaluator(new QualifiedEvaluator())));
+
+        Predicate<Applicant> qualifiedEvaluator = new QualifiedEvaluator().getEvaluator();
+        Predicate<Applicant> creditEvaluator = new CreditEvaluator().getEvaluator();
+        Predicate<Applicant> criminalEvaluator = new CriminalRecordsEvaluator().getEvaluator();
+        Predicate<Applicant> employmentEvaluator = new EmploymentEvaluator().getEvaluator();
+
         printEvaluation(evaluate(applicant,
-                new CreditEvaluator(new EmploymentEvaluator(new QualifiedEvaluator()))));
+                qualifiedEvaluator.and(creditEvaluator)));
         printEvaluation(evaluate(applicant,
-                new CriminalRecordsEvaluator(
-                        new EmploymentEvaluator(new QualifiedEvaluator()))));
+                qualifiedEvaluator.and(employmentEvaluator)
+                        .and(creditEvaluator)));
         printEvaluation(evaluate(applicant,
-                new CriminalRecordsEvaluator(
-                        new CreditEvaluator(
-                                new EmploymentEvaluator(new QualifiedEvaluator())))));
+                qualifiedEvaluator.and(employmentEvaluator)
+                        .and(criminalEvaluator)));
+        printEvaluation(evaluate(applicant,
+                qualifiedEvaluator.and(employmentEvaluator)
+                        .and(creditEvaluator)
+                        .and(criminalEvaluator)));
+
     }
 }
