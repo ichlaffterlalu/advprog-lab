@@ -11,5 +11,6 @@ public class CeilingFanOffCommand extends CeilingFanCommand {
     @Override
     protected void operate() {
         // TODO Complete me!
+        ceilingFan.off();
     }
 }

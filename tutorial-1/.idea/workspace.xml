@@ -18,7 +18,7 @@
     </projectState>
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
+    <leaf />
   </component>
   <component name="GradleLocalSettings">
     <option name="myGradleHomes">
@@ -208,8 +208,8 @@
     </option>
     <option name="modificationStamps">
       <map>
-        <entry key="$PROJECT_DIR$" value="3037264584448" />
-        <entry key="$PROJECT_DIR$/build.gradle" value="1922891176" />
+        <entry key="$PROJECT_DIR$" value="1519225658829" />
+        <entry key="$PROJECT_DIR$/build.gradle" value="886973111" />
         <entry key="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.properties" value="1970435619" />
       </map>
     </option>
@@ -372,6 +372,9 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
+      <pane id="Scratches" />
+      <pane id="PackagesPane" />
       <pane id="AndroidView" />
       <pane id="ProjectPane">
         <subPane>
@@ -428,9 +431,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
-      <pane id="PackagesPane" />
-      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -602,11 +602,12 @@
       <workItem from="1519017200445" duration="3129000" />
       <workItem from="1519023439522" duration="2192000" />
       <workItem from="1519221349637" duration="3079000" />
+      <workItem from="1519355261390" duration="178000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="8400000" />
+    <option name="totallyTimeSpent" value="8578000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
@@ -684,7 +685,6 @@
         <state split_layout="SPLIT">
           <first_editor relative-caret-position="2329">
             <caret line="137" column="5" lean-forward="true" selection-start-line="137" selection-start-column="5" selection-end-line="137" selection-end-column="5" />
-            <folding />
           </first_editor>
           <second_editor />
         </state>
@@ -861,7 +861,6 @@
         <state split_layout="SPLIT">
           <first_editor relative-caret-position="938">
             <caret line="165" column="0" lean-forward="false" selection-start-line="165" selection-start-column="0" selection-end-line="165" selection-end-column="0" />
-            <folding />
           </first_editor>
           <second_editor />
         </state>

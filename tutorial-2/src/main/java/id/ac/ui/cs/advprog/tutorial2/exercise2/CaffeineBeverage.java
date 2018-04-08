@@ -4,6 +4,10 @@ public abstract class CaffeineBeverage {
 
     public final void prepareRecipe() {
         // TODO Complete me!
+        this.boilWater();
+        this.brew();
+        this.pourInCup();
+        this.addCondiments();
     }
 
     protected abstract void addCondiments();

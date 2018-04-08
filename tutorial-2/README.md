@@ -181,30 +181,30 @@ gradle :tutorial-2:checkstyleMain
 
 ## Mandatory Tasks Checklist
 
-- [ ] Make at least 1 commit that contains your progress in completing
+- [x] Make at least 1 commit that contains your progress in completing
 Command pattern
-- [ ] Make at least 1 commit that contains your progress in completing
+- [x] Make at least 1 commit that contains your progress in completing
 Template Method pattern
-- [ ] Push your commits to online Git repository on your GitLab project
-- [ ] Complete all classes in `receiver` and `invoker` packages
-- [ ] Complete `LightOffCommand`, `LightOnCommand`, and `MacroCommand`
+- [x] Push your commits to online Git repository on your GitLab project
+- [x] Complete all classes in `receiver` and `invoker` packages
+- [x] Complete `LightOffCommand`, `LightOnCommand`, and `MacroCommand`
 classes in `command` package
-- [ ] Pass all tests for classes in `receiver` and `invoker` packages
-- [ ] Pass all tests for `CaffeineBeverage` class
+- [x] Pass all tests for classes in `receiver` and `invoker` packages
+- [x] Pass all tests for `CaffeineBeverage` class
 
 ## Additional Tasks Checklist
 
-- [ ] Make sure there are no code style issues, i.e. Checkstyle did not
+- [x] Make sure there are no code style issues, i.e. Checkstyle did not
 produce any warning when you execute `check` or `checkstyleMain` Gradle
 tasks
-- [ ] Implement `CeilingFanCommand` and its subclasses correctly
-- [ ] Pass all tests for classes in `command` package
-- [ ] Compare the template method version of `CeilingFanCommand` with the
+- [x] Implement `CeilingFanCommand` and its subclasses correctly
+- [x] Pass all tests for classes in `command` package
+- [x] Compare the template method version of `CeilingFanCommand` with the
 old design used by code examples in Head First Design Patterns chapter 6
 and describe the differences
     - Write your answer in [My Notes](#my-notes) section in this document
-- [ ] Implement `execute()` method in `MacroCommand` class using Stream API
-- [ ] All tests for `MacroCommand` still pass after `execute()` method was
+- [x] Implement `execute()` method in `MacroCommand` class using Stream API
+- [x] All tests for `MacroCommand` still pass after `execute()` method was
 modified to use Stream API
 
 ## My Notes
@@ -212,3 +212,21 @@ modified to use Stream API
 > Feel free to use this section to write your own notes related to your attempt
 > in doing the tutorial. You can also use this section to write text for
 > answering question(s) mentioned in the task checklists.
+
+#### Perbedaan menggunakan Template Method dengan contoh di Head First Design Patterns
+
+1. Perbedaan terdapat pada implementasi *interface* `Command`.
+    - Pada Head First Design Pattern, kelas-kelas *command* `CeilingFan` langsung
+      *implement interface* `Command`.
+    - Pada tutorial-2, terdapat *abstract class* `CeilingFanCommand` yang *implement
+      interface* `Command`, lalu membuat *abstract method* `operate()`, yang dapat
+      diimplementasikan oleh masing-masing kelas *command* `CeilingFan`.
+2. Berdasarkan pendapat saya, *template design pattern* yang digunakan `CeilingFanCommand`
+   di `tutorial-2` lebih efektif, karena dapat meningkatkan code reusability.
+    - Tombol execute() di setiap kelas-kelas `Command` sama-sama menyimpan speed terakhir
+      sebelum diubah dengan speed yang baru
+    - Pada `tutorial-2`, penyimpanan nilai speed tersebut disimpan di `execute()`, dan
+      pekerjaan mengubah `speed` dapat diimplementasikan di tiap-tiap kelas pada method
+      `operate()`.
+    - Desain seperti ini dapat mempermudah *code development* saat dibutuhkan tombol yang
+      sangat banyak.
