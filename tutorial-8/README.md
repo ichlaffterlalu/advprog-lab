@@ -57,12 +57,12 @@ are a foundation of a Math Quiz that you need to implement. Here are the intial 
 the quiz :
 
 1. There are 10 math problem (fraction arithmetic) that will be generated randomly
-1. You need to define how much time you need to answer 1 problem (in second), let us denote this by *N*
-1. After you define *N*, then you're going to answer each question one by one with following property:
+2. You need to define how much time you need to answer 1 problem (in second), let us denote this by *N*
+3. After you define *N*, then you're going to answer each question one by one with following property:
     - If you answer it correctly, and within *N* time limit, you get 10 points
     - If you answer it correctly, and after *N* time limit, you get 5 points
     - If you answer it wrong, you get 0 point regardless of the time limit
-1. At the end of the game, the total of the score will be displayed
+4. At the end of the game, the total of the score will be displayed
 
 Tips : You have to try the quiz first to understand more
 
@@ -71,8 +71,8 @@ Tips : You have to try the quiz first to understand more
 Now you need to implement *additional rule* for the quiz:
 
 1. We will giving a default score *100 points* in the begining of the quiz
-1. This point will be reduced 1 point every second of the game
-1. After answering, there are new rule for calculating new score :
+2. This point will be reduced 1 point every second of the game
+3. After answering, there are new rule for calculating new score :
     - Instead of giving 10 points, answering correctly within within *N* time limit
     will give you additional 10% points of the current score
     - Instead of giving 10 points, answering correctly within within *N* time limit
@@ -80,7 +80,7 @@ Now you need to implement *additional rule* for the quiz:
     - If you answer it wrong, you get 0 point regardless of the time limit
     - After each answer, you need to display *the current score after the player answering the problem*,
     and *total time needed to answer the problem*.
-1.  At the end of the game, the total of the score and the total time needed to answer all
+4.  At the end of the game, the total of the score and the total time needed to answer all
 the problem will be displayed
 
 Use at minimum 2 Thread to implement this new feature, 1<sup>st</sup> is for the
@@ -146,25 +146,25 @@ gradle :tutorial-8:jacocoTestReport
 
 ## Mandatory Tasks Checklist
 
-- [ ] Make sure that you have at least 1 commit for each exercises that contain
+- [x] Make sure that you have at least 1 commit for each exercises that contain
 changes to the code after refactoring
-- [ ] Explain in your `My Notes` Section in this README, why at the first template code,
+- [x] Explain in your `My Notes` Section in this README, why at the first template code,
 the initial Tally Counter cannot have the exact number of ordered ticket (Relate it to
 the declaration of `c++` and `c--`)
-- [ ] Implement the new `TallyCounter` version (e.g. `AtomicTallyCounter`) using 
+- [x] Implement the new `TallyCounter` version (e.g. `AtomicTallyCounter`) using 
 `AtomicInteger` and explain why it can be the solution of this particular concurrency 
 problem
-- [ ] Implement the new `TallyCounter` version (e.g. `SynchronizedTallyCounter`) using Java
+- [x] Implement the new `TallyCounter` version (e.g. `SynchronizedTallyCounter`) using Java
 `Synchronized` and explain why it can be the solution of this particular concurrency 
 problem
-- [ ] Push your commits to online Git repository on your GitLab project
+- [x] Push your commits to online Git repository on your GitLab project
 
 ## Additional Tasks Checklist
 
-- [ ] Make sure there are no code style issues, both in production code and
+- [x] Make sure there are no code style issues, both in production code and
 test code
-- [ ] Implementing the feature as requested in the Description
-- [ ] Write a several sentence or paragraph about the additional task
+- [x] Implementing the feature as requested in the Description
+- [x] Write a several sentence or paragraph about the additional task
     - Can you implement the new quiz rule without any concurrency? Explain Why?
     - Can you implement the new feature with using at minimum 1 Thread? Explain Why?
 
@@ -179,3 +179,59 @@ for the template code that he created in `Fraction` and `Main` class in Package 
 > Feel free to use this section to write your own notes related to your attempt
 > in doing the tutorial. You can also use this section to write text for
 > answering question(s) mentioned in the task checklists.
+
+### Why the original TallyCounter gives incorrect result?
+
+Alasan utamanya adalah bahwa setiap thread (dalam hal ini adalah OnlineTicketShop) saling
+berebutan dalam mengakses dan mengubah suatu variabel di TallyCounter. Sehingga, terdapat
+kemungkinan untuk terjadinya *miss* dari pendataan tiket.
+
+Untuk ilustrasi:
+```
+    kondisi sekarang: 5
+    thread 1: sesuatu++ // membaca sebagai 5, increment jadi 6
+    thread 2: sesuatu++ // membaca sebagai 5, increment jadi 6
+    kondisi berikutnya: 6
+    seharusnya: 7
+```
+
+Sehingga diperlukan adanya sinkronisasi agar pekerjaan-pekerjaan tidak saling menimpa satu
+sama lain.
+
+### Why AtomicTallyCounter can be a solution for this problem?
+
+Karena `AtomicInteger` dapat memastikan pembacaan dan penulisan tidak dilakukan pada saat
+yang bersamaan (hanya bisa sekali dalam satu waktu). Hal ini dapat dilakukan karena
+method get dan set yang ada pada API ini mendukung operasi atomik, yaitu operasinya
+sudah tidak dapat dipecah-pecah lagi, sehingga aman bagi *multithreading* yang cenderung
+memisahkan pekerjaan-pekerjaan.
+
+### Why synchronize keyword can also be a solution?
+
+Karena keyword `synchronized` merupakan salah satu cara untuk menghadang thread lain dalam
+mengakses suatu method ketika sudah ada thread yang sedang mengakses method tersebut. Ini
+akan menyebabkan tidak ada dua thread yang mengakses method yang sama secara bersamaan.
+
+### Can the new rules for the "additional" game be implemented without any concurrence?
+
+Tidak, karena proses input dan penghitungan waktu harus dilakukan secara bersamaan.
+
+### Can the new rules be implemented with minimum of 1 thread?
+
+Bisa, karena dua proses yang dilakukan secara konkuren, yaitu pengurangan skor dan pembacaan
+input dapat dilakukan secara terjalin (saling terhubung/*interleaving*).
+
+Untuk mencapai hal tersebut, dapat dilakukan iterasi hingga pembacaan selesai dilakukan
+**sekaligus** mengecek waktu untuk pengurangan skor. Tentunya, hal itu dilakukan tanpa melakukan
+*blocking* pada standard input.
+
+### Any reflections about concurrency?
+
+Tantangan utama dalam pembuatan program yang konkuren (terutama *parallelism*) adalah mengetahui
+terlebih dahulu kode-kode yang dapat dijalankan secara indpenden, sehingga bisa dijalankan secara
+paralel. Selain itu, perlu diperhatikan pula *cost* dari komputasi maupun memori yang diakibatkan
+pembagian tugas secara *multithreading*.
+
+Namun, pada dasarnya, untuk tutorial ini masih belum perlu untuk memikirkan dampak dari segi
+biaya komputasi dan performanya. Namun, kenyataannya banyak kasus yang menjadikan kedua hal tersebut
+sebagai hal yang penting untuk diperhatikan.
