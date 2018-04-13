@@ -1,6 +1,6 @@
 package tallycounter;
 
-public class StandardTallyCounter implements TallyCounter {
+public class BasicTallyCounter implements TallyCounter {
     private int counter = 0;
 
     public void increment() {
