@@ -16,7 +16,7 @@ public class Timer extends Observable implements Runnable {
         this.currentTime = 0;
     }
 
-    public void mulai() {
+    public void start() {
         if (thread == null) {
             thread = new Thread(this, "Timer");
             this.startTime = System.currentTimeMillis();
@@ -40,7 +40,9 @@ public class Timer extends Observable implements Runnable {
                     notifyObservers();
                 }
             }
-        } catch (InterruptedException e) {}
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
     }
 
     public void stop() {

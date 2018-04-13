@@ -20,13 +20,19 @@ public class Main {
     private static final int QUEST_TYPE_DIVS = 3;
 
     public static void main(String[] args) {
-        // write your code here
+        // initialize game components
         Scanner scanner = new Scanner(System.in);
+        PointCounter score = new PointCounter();
+        Timer gameTimer = new Timer();
+        gameTimer.addObserver(score);
+
+        // initialize game variables
         String startNewQuestsIpt;
         int thresholdTime;
         int totalRightBelowThreshold;
         int totalRightAboveThreshold;
         int totalWrong;
+        double totalTime;
 
         do {
             // initialize value
@@ -34,6 +40,9 @@ public class Main {
             totalRightBelowThreshold = 0;
             totalRightAboveThreshold = 0;
             totalWrong = 0;
+            totalTime = 0;
+            gameTimer.reset();
+            score.resetScore();
 
             // Asking for asnwering question threshold time
             System.out.print("How much time do you need "
@@ -43,6 +52,9 @@ public class Main {
 
 
             for (int questNo = 1; questNo <= TOTAL_QUEST; questNo++) {
+                gameTimer.reset();
+                gameTimer.start();
+
                 System.out.print(questNo + ") ");
                 Random rand = new Random();
                 Fraction firstPosFrac = new Fraction(rand.nextInt(40) - 20,
@@ -79,9 +91,9 @@ public class Main {
 
                 // Asking for question
                 // And capture before and after the time in milis
-                long totalMilis = System.currentTimeMillis();
+                gameTimer.start();
                 String rawAns = scanner.nextLine();
-                totalMilis = System.currentTimeMillis() - totalMilis;
+                gameTimer.stop();
 
                 // Process user answer
                 Fraction userAnswer;
@@ -95,16 +107,23 @@ public class Main {
 
                 // Check answer
                 if (expectedAnswer.isEqual(userAnswer)) {
-                    if (totalMilis / 1000 <= thresholdTime) {
+                    if (gameTimer.getCurrentTime() / 1000 <= thresholdTime) {
+                        score.correctOnTime();
                         totalRightBelowThreshold++;
                     } else {
+                        score.correctLate();
                         totalRightAboveThreshold++;
                     }
                 } else {
                     totalWrong++;
                 }
-            }
 
+                // Print current round result
+                double currentTime = ((double) gameTimer.getCurrentTime()) / 1000;
+                System.out.println("Current score: " + score.getScore() + "Time needed: "
+                        + currentTime + "\n");
+                totalTime += currentTime;
+            }
             // Print the result
             System.out.println("\n=========Result==========");
             System.out.println("Right answer and within time limit  =  "
@@ -112,15 +131,8 @@ public class Main {
             System.out.println("Right answer but over time limit  =  "
                     + totalRightAboveThreshold);
             System.out.println("Wrong answer  =  " + totalWrong);
-
-            int totalPoint = (totalRightBelowThreshold * RIGHT_BELOW_THRESHOLD_POINT)
-                    + (totalRightAboveThreshold * RIGHT_ABOVE_THRESHOLD_POINT)
-                    + (totalWrong * WRONG_POINT);
-            System.out.println("\nTotal point acquired : " + totalPoint
-                    + "(" + (totalRightBelowThreshold * RIGHT_BELOW_THRESHOLD_POINT)
-                    + "+" + (totalRightAboveThreshold * RIGHT_ABOVE_THRESHOLD_POINT)
-                    + "+" + (totalWrong * WRONG_POINT) + ")");
-
+            System.out.println("\nTotal points acquired : " + score.getScore());
+            System.out.println("\nTotal time needed : " + totalTime);
             System.out.println("\n");
 
             // Asking if user want to start a new questions

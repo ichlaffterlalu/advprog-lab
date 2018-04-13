@@ -9,7 +9,7 @@ public class OnlineTicketShow implements Runnable {
     private int buyingRateinMiliSecond;
 
     public OnlineTicketShow(String websiteName, TallyCounter tallyCounterReference,
-                                 int maxTicketOrdered, int buyingRateinMiliSecond) {
+                            int maxTicketOrdered, int buyingRateinMiliSecond) {
         this.tallyCounterReference = tallyCounterReference;
         this.maxTicketOrdered = maxTicketOrdered;
         this.websiteName = websiteName;
