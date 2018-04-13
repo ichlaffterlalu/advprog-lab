@@ -3,11 +3,11 @@ package tallycounter;
 
 public class Main {
     public static void main(String[] args) {
-        TallyCounter counter = new TallyCounter();
+        TallyCounter counter = new StandardTallyCounter();
 
         /* Increase this variable value to make the thread process
         slower, so you can see the log in console more clearly */
-        int buyingRate = 150;
+        int buyingRate = 1000;
 
         /* Total Ticket Ordered is 150 ticket. So the tally
         counter must show 150 at the end of the thread */

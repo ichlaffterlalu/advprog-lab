@@ -24,6 +24,9 @@
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/tutorial-7/tutorial-7.iml" filepath="$PROJECT_DIR$/.idea/modules/tutorial-7/tutorial-7.iml" group="tutorial-7" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/tutorial-7/tutorial-7_main.iml" filepath="$PROJECT_DIR$/.idea/modules/tutorial-7/tutorial-7_main.iml" group="tutorial-7" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/tutorial-7/tutorial-7_test.iml" filepath="$PROJECT_DIR$/.idea/modules/tutorial-7/tutorial-7_test.iml" group="tutorial-7" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/tutorial-8/tutorial-8.iml" filepath="$PROJECT_DIR$/.idea/modules/tutorial-8/tutorial-8.iml" group="tutorial-8" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/tutorial-8/tutorial-8_main.iml" filepath="$PROJECT_DIR$/.idea/modules/tutorial-8/tutorial-8_main.iml" group="tutorial-8" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/tutorial-8/tutorial-8_test.iml" filepath="$PROJECT_DIR$/.idea/modules/tutorial-8/tutorial-8_test.iml" group="tutorial-8" />
     </modules>
   </component>
 </project>
