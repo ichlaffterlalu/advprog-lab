@@ -3,7 +3,4 @@ include 'tutorial-1'
 include 'tutorial-2'
 include 'tutorial-3'
 include 'tutorial-4'
-<<<<<<< HEAD
-=======
 include 'tutorial-5'
->>>>>>> tutorial-5
