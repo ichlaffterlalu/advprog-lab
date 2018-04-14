@@ -46,8 +46,6 @@ test:t4:
     - /.*tutorial[_-].*4$/
   except:
     - branches@csui-advprog-2018/lab
-<<<<<<< HEAD
-=======
 
 # Tutorial 5 CI jobs
 test:t5:
@@ -62,4 +60,3 @@ test:t5:
       - /tutorial-5/build/*
       expire_in: 1 week
 
->>>>>>> tutorial-5
