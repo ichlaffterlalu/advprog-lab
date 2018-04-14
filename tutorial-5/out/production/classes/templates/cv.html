@@ -1,0 +1,21 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Getting Started: CVb Content</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+<body>
+<p th:text="${visitorMessage}" />
+<p th:text="'My name is '+ ${owner}"/>
+<p th:text="'I born on '+${birthPlace}+', '+${birthDate}"/>
+<p th:text="'My house is at '+${address}"/>
+<p th:text="'Here are my Education Histories'"/>
+<p th:text="'Elementary school : '+${elemSchool}"/>
+<p th:text="'Junior Hish School : '+${midSchool}"/>
+<p th:text="'Senior High School : '+${highSchool}"/>
+<p th:text="'University : '+${univ}"/>
+<p th:text="'In case you you want to know me more...'"/>
+<p th:text="${essay}"/>
+
+</body>
+</html>
