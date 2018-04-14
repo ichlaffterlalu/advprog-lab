@@ -100,7 +100,7 @@ directory that containing week 1 problem, i.e. `tutorial-1`.
 your other attempts at other problems, create a new branch
 specifically for working on week 1 problem. Use Git command:
 `git checkout -b tutorial-1 master`
-    - Explanation: Create a new branch named `tutorial-1` based on 
+    - Explanation: Create a new branch named `tutorial-1` based on
     latest commit in `master` branch.
 3. Read the README file in `tutorial-1` directory. It contains set of
 mandatory and optional tasks that you can work on.
@@ -114,7 +114,7 @@ in [this guide](http://chris.beams.io/posts/git-commit/) on how to
 write a good commit message.
 7. Repeat steps 4 - 6 until you finished the tutorial.
 8. Once you are ready to submit your work or you want to save it to
-your repository on GitLab, do a Git push. The Git command: 
+your repository on GitLab, do a Git push. The Git command:
 `git push -u origin tutorial-1`
 9. If you are ready to be graded by TA, make a Merge Request (MR) via
 Merge Request menu on GitLab. Set your tutorial branch as source and
