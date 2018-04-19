@@ -16,13 +16,12 @@ import tutorial.javari.animal.Gender;
 
 public class DatabaseManager {
 
-    private static final String CSV_PATH = "tutorial-9/javari_data.csv";
+    private static final String CSV_PATH = "javari_data.csv";
     private static final Path FILE = Paths.get("", CSV_PATH);
     private List<Animal> animals;
 
     public DatabaseManager() throws IOException {
         this.animals = new ArrayList<Animal>();
-        System.out.println(FILE.toString());
         loadData();
     }
 
