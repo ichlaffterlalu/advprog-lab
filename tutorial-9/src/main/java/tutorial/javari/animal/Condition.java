@@ -11,7 +11,7 @@ public enum Condition {
 
     HEALTHY, SICK;
     private static final String HEALTHY_STR = "healthy";
-    private static final String SICK_STR = "not healthy";
+    private static final String SICK_STR = "sick";
 
     /**
      * Returns the correct condition enum based on given string representation

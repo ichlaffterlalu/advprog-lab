@@ -67,7 +67,7 @@ public class DatabaseManager {
     private void saveData() throws IOException {
         ArrayList<String> lines = new ArrayList<>();
         animals.forEach(animal -> lines.add(animalToCsv(animal)));
-        Files.write(FILE, lines, Charset.defaultCharset(), StandardOpenOption.WRITE);
+        Files.write(FILE, lines, Charset.defaultCharset(), StandardOpenOption.TRUNCATE_EXISTING);
     }
 
     private boolean duplicateId(Animal subject) {

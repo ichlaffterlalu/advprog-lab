@@ -42,8 +42,8 @@ public class JavariController {
         if (animal == null) {
             return JsonMessage.getNotFoundMessage(id);
         }
-        Object[] jsonArr = {JsonMessage.getSuccessDeleteMessage(), animal};
 
+        Object[] jsonArr = {JsonMessage.getSuccessDeleteMessage(), animal};
         return jsonArr;
     }
 
