@@ -1,6 +1,5 @@
 package tutorial.javari;
 
-import com.fasterxml.jackson.databind.ObjectMapper;
 import java.io.IOException;
 import java.nio.charset.Charset;
 import java.nio.file.Files;
@@ -9,6 +8,7 @@ import java.nio.file.Paths;
 import java.nio.file.StandardOpenOption;
 import java.util.ArrayList;
 import java.util.List;
+import org.json.JSONObject;
 
 import tutorial.javari.animal.Animal;
 import tutorial.javari.animal.Condition;
@@ -16,13 +16,13 @@ import tutorial.javari.animal.Gender;
 
 public class DatabaseManager {
 
-    private static final ObjectMapper MAPPER = new ObjectMapper();
-    private static final String CSV_PATH = "javari_data.csv";
+    private static final String CSV_PATH = "tutorial-9/javari_data.csv";
     private static final Path FILE = Paths.get("", CSV_PATH);
     private List<Animal> animals;
 
     public DatabaseManager() throws IOException {
         this.animals = new ArrayList<Animal>();
+        System.out.println(FILE.toString());
         loadData();
     }
 
@@ -90,7 +90,12 @@ public class DatabaseManager {
         return String.join(",", attrs);
     }
 
-    private Animal jsonToAnimal(String json) throws IOException {
-        return MAPPER.readValue(json, Animal.class);
+    private Animal jsonToAnimal(String input) {
+        JSONObject json = new JSONObject(input);
+        return new Animal(json.getInt("id"), json.getString("type"),
+                json.getString("name"), Gender.parseGender(json.getString("gender")),
+                json.getDouble("length"), json.getDouble("weight"),
+                Condition.parseCondition(json.getString("condition")));
+
     }
 }
