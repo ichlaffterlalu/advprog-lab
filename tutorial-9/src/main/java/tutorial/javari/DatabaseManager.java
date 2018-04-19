@@ -16,10 +16,10 @@ import tutorial.javari.animal.Gender;
 
 public class DatabaseManager {
 
-    private List<Animal> animals;
-    private final String CSV_PATH = "javari_data.csv";
-    private final Path FILE = Paths.get("", CSV_PATH);
     private static final ObjectMapper MAPPER = new ObjectMapper();
+    private static final String CSV_PATH = "javari_data.csv";
+    private static final Path FILE = Paths.get("", CSV_PATH);
+    private List<Animal> animals;
 
     public DatabaseManager() throws IOException {
         this.animals = new ArrayList<Animal>();
@@ -30,18 +30,18 @@ public class DatabaseManager {
         return animals;
     }
 
-    public Animal getAnimalById (int id) {
+    public Animal getAnimalById(int id) {
         for (Animal animal : animals) {
-            if(animal.getId() == id) {
+            if (animal.getId() == id) {
                 return animal;
             }
         }
         return null;
     }
 
-    public Animal addAnimal (String json) throws IOException {
+    public Animal addAnimal(String json) throws IOException {
         Animal newAnimal = jsonToAnimal(json);
-        if(!duplicateId(newAnimal)) {
+        if (!duplicateId(newAnimal)) {
             animals.add(newAnimal);
             saveData();
             return newAnimal;
@@ -49,10 +49,10 @@ public class DatabaseManager {
         return null;
     }
 
-    public Animal deleteAnimalById (int id) throws IOException {
+    public Animal deleteAnimalById(int id) throws IOException {
         Animal animal = null;
-        for(int i=0;i<animals.size();i++) {
-            if(animals.get(i).getId() == id) {
+        for (int i = 0; i < animals.size(); i++) {
+            if (animals.get(i).getId() == id) {
                 animal = animals.remove(i);
                 saveData();
                 break;
