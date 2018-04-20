@@ -136,17 +136,17 @@ gradle :tutorial-9:checkstyleTest
 
 ## Mandatory Tasks Checklist
 
-- [ ] Prepare sample CSV file containing animal records
-- [ ] Create required class(es) for managing (CRUD) animal records
-- [ ] Implement all required Web service endpoints
-- [ ] Push your commits to online Git repository on your GitLab project
+- [x] Prepare sample CSV file containing animal records
+- [x] Create required class(es) for managing (CRUD) animal records
+- [x] Implement all required Web service endpoints
+- [x] Push your commits to online Git repository on your GitLab project
 
 ## Additional Tasks Checklist
 
-- [ ] Make sure there are no code style issues, both in production code and
+- [x] Make sure there are no code style issues, both in production code and
 test code
-- [ ] Create unit tests for testing `JavariController`
-- [ ] Do some research on how the controllers in Spring Framework can return
+- [x] Create unit tests for testing `JavariController`
+- [x] Do some research on how the controllers in Spring Framework can return
 a JSON object while the actual data was taken from a Java object, e.g.
 `Greeting` and `Animal` objects
     - Your report, at minimum, must contains information about: libraries that
@@ -159,3 +159,21 @@ a JSON object while the actual data was taken from a Java object, e.g.
 > Feel free to use this section to write your own notes related to your attempt
 > in doing the tutorial. You can also use this section to write text for
 > answering question(s) mentioned in the task checklists.
+
+Translasi Object Java ke JSON yang dilakukan secara otomatis oleh Framework Springboot
+dilakukan dengan menggunakan library Jackson JSON. Ketika client melakukan request, maka
+pada controller akan otomatis menggunakan class ObjectMapper yang akan melakukan parsing
+Object Java ke dalam JSON untuk dikembalikan dalam bentuk response. Sehingga, programmer
+tidak perlu membuatnya secara manual.
+
+### How it works?
+
+Pertama kali, objek ObjectMapper akan dibuat terlebih dahulu, kemudian ObjectMapper akan
+memanggil writeValueAsString yang membaca parameter dari objek. Berdasarkan pengamatan saya,
+Object akan melihat getter dari class terlebih dahulu, lalu menjadikan getter sebagai key
+tanpa prefix get, dengan kembalian getter sebagai value, terlepas apakah yang dikembalikan
+adalah instance variable atau bukan. Format inilah yang kemudian dijadikan JSON untuk response.
+
+Penggunaan JSON sangat menguntungkan karena selain kompatibel terhadap semua bahasa pemrograman
+berbasis C seperti Java, Python, JavaScript, C++, dll., namun juga dapat mudah dibaca oleh
+pengguna secara umum.

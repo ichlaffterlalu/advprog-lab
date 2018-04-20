@@ -4,8 +4,8 @@ package tutorial.javari.animal;
  * This class describes possible health conditions for an animal.
  *
  * @author Programming Foundations 2 Teaching Team
- * @author TODO If you make changes in this class, please write your name here
- *     and describe the changes in the comment block
+ * @author Ichlasul Affan
+ *     Changed the value of SICK_STR to "sick" to increase consistency.
  */
 public enum Condition {
 

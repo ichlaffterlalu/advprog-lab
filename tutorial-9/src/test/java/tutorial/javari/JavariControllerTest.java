@@ -58,4 +58,10 @@ public class JavariControllerTest {
         this.mockMvc.perform(delete("/javari/100")).andDo(print()).andExpect(status().isOk())
                 .andExpect(jsonPath("$[1].id").value("100"));
     }
+
+    @Test
+    public void deleteAnimalByIdNotFoundTest() throws Exception {
+        this.mockMvc.perform(delete("/javari/12412")).andDo(print()).andExpect(status().isOk())
+                .andExpect(jsonPath("$.msgType").value("warning"));
+    }
 }
