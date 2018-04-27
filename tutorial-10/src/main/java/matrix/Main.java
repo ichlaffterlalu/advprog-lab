@@ -51,8 +51,8 @@ public class Main {
             totalAllNanosStrassen += System.nanoTime() - initialNanosStrassen;
         }
 
-        System.out.println("Average Basic: " + (totalAllNanosBasic/1000));
-        System.out.println("Average Strassen: " + (totalAllNanosStrassen/1000));
+        System.out.println("Average Basic: " + (totalAllNanosBasic / 1000));
+        System.out.println("Average Strassen: " + (totalAllNanosStrassen / 1000));
     }
 
     /**

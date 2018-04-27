@@ -38,8 +38,8 @@ public class Main {
             totalAllNanosQuick += System.nanoTime() - initialNanosQuick;
         }
 
-        System.out.println("Average Slow Search: " + (totalAllNanosSlow/10000));
-        System.out.println("Average Quick Search: " + (totalAllNanosQuick/10000));
+        System.out.println("Average Slow Search: " + (totalAllNanosSlow / 10000));
+        System.out.println("Average Quick Search: " + (totalAllNanosQuick / 10000));
 
         // Warmup iterations for sorting
         for (int i = 0; i < 10; i++) {
@@ -66,8 +66,8 @@ public class Main {
             totalAllNanosQuick += System.nanoTime() - initialNanosQuick;
         }
 
-        System.out.println("Average Slow Sort: " + (totalAllNanosSlow/100));
-        System.out.println("Average Quick Sort: " + (totalAllNanosQuick/100));
+        System.out.println("Average Slow Sort: " + (totalAllNanosSlow / 100));
+        System.out.println("Average Quick Sort: " + (totalAllNanosQuick / 100));
 
         //Searching Input After Sorting
         sequenceInput = Sorter.quickSort(sequenceInput);
@@ -87,7 +87,7 @@ public class Main {
             totalAllNanosSlow += System.nanoTime() - initialNanosBinary;
         }
 
-        System.out.println("Average Binary Search: " + (totalAllNanosBinary/10000));
+        System.out.println("Average Binary Search: " + (totalAllNanosBinary / 10000));
     }
 
     /**

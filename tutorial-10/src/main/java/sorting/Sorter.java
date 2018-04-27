@@ -31,7 +31,7 @@ public class Sorter {
      * @return a sorted array of integer
      */
     public static int[] quickSort(int[] inputArr) {
-        quickSortTail(inputArr, 0, inputArr.length-1);
+        quickSortTail(inputArr, 0, inputArr.length - 1);
         return inputArr;
     }
 
@@ -42,7 +42,8 @@ public class Sorter {
      * @param end partition ending index.
      */
     private static void quickSortTail(int[] inputArr, int start, int end) {
-        int i = start, j = end;
+        int i = start;
+        int j = end;
         int pivot = inputArr[start + (end - start) / 2];
 
         while (i <= j) {
@@ -59,10 +60,10 @@ public class Sorter {
             }
         }
         swap(inputArr, i, end);
-        if(start < j) {
+        if (start < j) {
             quickSortTail(inputArr, start, j);
         }
-        if(i < end) {
+        if (i < end) {
             quickSortTail(inputArr, i, end);
         }
     }

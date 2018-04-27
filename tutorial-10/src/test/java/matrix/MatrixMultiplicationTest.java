@@ -40,36 +40,7 @@ public class MatrixMultiplicationTest {
             assertTrue(illegal);
         }
     }
-
-    @Test
-    public void benchmarkTest() throws InvalidMatrixSizeForMultiplicationException {
-        for (int i = 0;i < 100;i++) {
-            MatrixOperation.basicMultiplicationAlgorithm(runTestMtx1, runTestMtx2);
-        }
-        long timeBasicOp = System.nanoTime();
-        for (int i = 0;i < 1000;i++) {
-            MatrixOperation.basicMultiplicationAlgorithm(runTestMtx1, runTestMtx2);
-        }
-        timeBasicOp = (System.nanoTime() - timeBasicOp) / 1000;
-        for (int i = 0;i < 100;i++) {
-            MatrixOperation.strassenMatrixMultiForNonSquareMatrix(runTestMtx1, runTestMtx2);
-        }
-        long timeStrassensOp = System.nanoTime();
-        for (int i = 0;i < 1000;i++) {
-            MatrixOperation.strassenMatrixMultiForNonSquareMatrix(runTestMtx1, runTestMtx2);
-        }
-        timeStrassensOp = (System.nanoTime() - timeStrassensOp) / 1000;
-        System.out.println("Benchmark Report : Basic Operation");
-        System.out.println("Warmup Iterations : 100 times");
-        System.out.println("Testing iterations : 1000 times");
-        System.out.println("Average execution time : " + timeBasicOp + " ns");
-        System.out.println();
-        System.out.println("Benchmark Report : Strassen Operation");
-        System.out.println("Warmup Iterations : 100 times");
-        System.out.println("Testing iterations : 1000 times");
-        System.out.println("Average execution time : " + timeStrassensOp + " ns");
-    }
-
+    
     private static boolean mainRunner() {
         boolean isOk = true;
         try {

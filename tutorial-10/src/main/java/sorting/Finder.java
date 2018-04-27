@@ -1,11 +1,9 @@
 package sorting;
 
 public class Finder {
-
-
     /**
      * Some searching algorithm that possibly the slowest algorithm.
-     * This algorithm can search a value irregardless of whether the sequence already sorted or not.
+     * This algorithm can search a value irregardless of whether the sequence already sorted.
      * @param arrOfInt is a sequence of integer.
      * @param searchedValue value that need to be searched inside the sequence.
      * @return -1 if there are no such value inside the sequence, else return searchedValue.
@@ -59,10 +57,10 @@ public class Finder {
      * @return -1 if there are no such value inside the sequence, else return searchedValue.
      */
     private static int binarySearch(int[] arrOfInt, int searchedValue, int start, int end) {
-        if(end >= 1) {
+        if (end >= 1) {
             int mid = start + (end - start) / 2;
 
-            if(arrOfInt[mid] == searchedValue) {
+            if (arrOfInt[mid] == searchedValue) {
                 return searchedValue;
             }
 
