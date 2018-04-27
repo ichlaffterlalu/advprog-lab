@@ -15,22 +15,22 @@ public class Main {
         int[] sequenceInput = convertInputFileToArray();
 
         //Searching Input Before Sorting
-        long totalMilisSearchBeforeSort = System.currentTimeMillis();
+        long totalNanosSearchBeforeSort = System.nanoTime();
         int searchingResultBeforeSort = Finder.slowSearch(sequenceInput, 40738);
-        totalMilisSearchBeforeSort = System.currentTimeMillis() - totalMilisSearchBeforeSort;
-        System.out.println("Searching Complete in " + totalMilisSearchBeforeSort + " milisecond");
+        totalNanosSearchBeforeSort = System.nanoTime() - totalNanosSearchBeforeSort;
+        System.out.println("Searching Complete in " + totalNanosSearchBeforeSort + " nanosecond");
 
         //Sorting Input
-        long totalMilisSorting = System.currentTimeMillis();
+        long totalNanosSorting = System.nanoTime();
         int[] sortedInput = Sorter.slowSort(sequenceInput);
-        totalMilisSorting = System.currentTimeMillis() - totalMilisSorting;
-        System.out.println("Sorting Complete in " + totalMilisSorting + " milisecond");
+        totalNanosSorting = System.nanoTime() - totalNanosSorting;
+        System.out.println("Sorting Complete in " + totalNanosSorting + " nanosecond");
 
         //Searching Input After Sorting
-        long totalMilisSearchAfterSort = System.currentTimeMillis();
+        long totalNanosSearchAfterSort = System.nanoTime();
         int searchingResultAfterSort = Finder.slowSearch(sequenceInput, 40738);
-        totalMilisSearchAfterSort = System.currentTimeMillis() - totalMilisSearchAfterSort;
-        System.out.println("Searching Complete in " + totalMilisSearchAfterSort + " milisecond");
+        totalNanosSearchAfterSort = System.nanoTime() - totalNanosSearchAfterSort;
+        System.out.println("Searching Complete in " + totalNanosSearchAfterSort + " nanosecond");
     }
 
     /**

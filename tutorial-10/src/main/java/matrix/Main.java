@@ -21,15 +21,36 @@ public class Main {
         double[][] secondMatrix = convertInputFileToMatrix(pathFileMatrix2, numberOfLine2);
 
         //TODO Implement, do your benchmark test for these algorithm start from here
+        // Warmup iterations
+        for (int i = 0; i < 100; i++) {
+            //Example usage of basic multiplication algorithm.
+            MatrixOperation.basicMultiplicationAlgorithm(firstMatrix, secondMatrix);
 
-        //Example usage of basic multiplication algorithm.
-        double[][] multiplicationResult =
-                MatrixOperation.basicMultiplicationAlgorithm(firstMatrix, secondMatrix);
+            //Example usage of strassen multiplication algorithm.
+            MatrixOperation.strassenMatrixMultiForNonSquareMatrix(firstMatrix, secondMatrix);
+        }
 
-        //Example usage of strassen multiplication algorithm.
-        double[][] strassenMultiplicationResult =
-                MatrixOperation.strassenMatrixMultiForNonSquareMatrix(firstMatrix, secondMatrix);
+        // Testing iterations
+        long totalAllNanosBasic = 0;
+        long totalAllNanosStrassen = 0;
+        for (int i = 0; i < 1000; i++) {
+            //Example usage of basic multiplication algorithm.
+            long initialNanosBasic = System.nanoTime();
+            double[][] multiplicationResult =
+                    MatrixOperation.basicMultiplicationAlgorithm(firstMatrix, secondMatrix);
+            totalAllNanosBasic += System.nanoTime() - initialNanosBasic;
 
+            //Example usage of strassen multiplication algorithm.
+            long initialNanosStrassen = System.nanoTime();
+            double[][] strassenMultiplicationResult =
+                    MatrixOperation.strassenMatrixMultiForNonSquareMatrix(firstMatrix, secondMatrix);
+            totalAllNanosStrassen += System.nanoTime() - initialNanosStrassen;
+
+            System.out.println("Testing iteration: " + (i + 1));
+        }
+
+        System.out.println("Average Basic: " + (totalAllNanosBasic/1000));
+        System.out.println("Average Strassen: " + (totalAllNanosStrassen/1000));
     }
 
     /**
