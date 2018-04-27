@@ -29,4 +29,24 @@ public class Movie {
     public void setPriceCode(int priceCode) {
         this.priceCode = priceCode;
     }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) {
+            return true;
+        }
+
+        if (o == null || getClass() != o.getClass()) {
+            return false;
+        }
+
+        Movie movie = (Movie) o;
+        return priceCode == movie.priceCode
+                && Objects.equals(title, movie.title);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(title, priceCode);
+    }
 }

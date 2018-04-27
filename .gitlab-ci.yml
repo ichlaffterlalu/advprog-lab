@@ -70,3 +70,43 @@ test:t6:
   artifacts:
       paths:
       - /tutorial-6/build/*
+
+# Tutorial 7 CI jobs
+test:t7:
+  stage: test
+  script:
+  - gradle :tutorial-7:check
+  - gradle :tutorial-7:jacocoTestReport
+  only:
+    - /.*tutorial[_-].*7$/
+  except:
+    - branches@csui-advprog-2018/lab
+  artifacts:
+      paths:
+      - /tutorial-7/build/*
+
+# Tutorial 8 CI jobs
+test:t8:
+  stage: test
+  script:
+  - gradle :tutorial-8:check
+  only:
+    - /.*tutorial[_-].*8$/
+  except:
+    - branches@csui-advprog-2018/lab
+  artifacts:
+      paths:
+      - /tutorial-8/build/*
+
+# Tutorial 10 CI jobs
+test:t10:
+  stage: test
+  script:
+  - gradle :tutorial-10:check
+  only:
+    - /.*tutorial[_-].*10$/
+  except:
+    - branches@csui-advprog-2018/lab
+  artifacts:
+      paths:
+      - /tutorial-10/build/*
