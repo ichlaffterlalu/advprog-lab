@@ -68,7 +68,7 @@ public class Finder {
 
             if (arrOfInt[mid] > searchedValue) {
                 return binarySearch(arrOfInt, searchedValue, start, mid-1);
-            }gi
+            }
 
             return binarySearch(arrOfInt, searchedValue, mid+1, end);
         }
