@@ -78,12 +78,12 @@ public class Main {
             Finder.binarySearch(sequenceInput, 40738);
         }
 
-        // Test iteration for search
+        // Test iteration for searchgit
         long totalAllNanosBinary = 0;
         for (int i = 0; i < 10000; i++) {
             //Searching Input After Sorting using Binary Search
             long initialNanosBinary = System.nanoTime();
-            Finder.slowSearch(sequenceInput, 40738);
+            Finder.binarySearch(sequenceInput, 40738);
             totalAllNanosSlow += System.nanoTime() - initialNanosBinary;
         }
 

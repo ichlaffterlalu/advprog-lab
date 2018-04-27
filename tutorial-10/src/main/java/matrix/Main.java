@@ -9,16 +9,20 @@ public class Main {
     private static String genericMatrixPath = "plainTextDirectory/input/matrixProblem";
     private static String pathFileMatrix1 = genericMatrixPath + "A/matrixProblemSet1.txt";
     private static int numberOfLine1 = 50;
+    private static int numberOfColumn1 = 50;
 
     private static String pathFileMatrix2 = genericMatrixPath + "A/matrixProblemSet2.txt";
     private static int numberOfLine2 = 50;
+    private static int numberOfColumn2 = 50;
 
     public static void main(String[] args) throws
             IOException, InvalidMatrixSizeForMultiplicationException {
 
         //Convert into array
-        double[][] firstMatrix = convertInputFileToMatrix(pathFileMatrix1, numberOfLine1);
-        double[][] secondMatrix = convertInputFileToMatrix(pathFileMatrix2, numberOfLine2);
+        double[][] firstMatrix = convertInputFileToMatrix(pathFileMatrix1,
+                numberOfLine1, numberOfColumn1);
+        double[][] secondMatrix = convertInputFileToMatrix(pathFileMatrix2,
+                numberOfLine2, numberOfColumn2);
 
         //TODO Implement, do your benchmark test for these algorithm start from here
         // Warmup iterations
@@ -58,17 +62,18 @@ public class Main {
      * @return 2 dimensional array of double representing matrix.
      * @throws IOException in the case of the file is not found because of the wrong path of file.
      */
-    public static double[][] convertInputFileToMatrix(String pathFile, int numberOfLine)
+    public static double[][] convertInputFileToMatrix(String pathFile,
+                                                      int numberOfLine, int numberOfColumn)
             throws IOException {
         File matrixFile = new File(pathFile);
         FileReader fileReader = new FileReader(matrixFile);
-        double[][] matrix = new double[numberOfLine][numberOfLine];
+        double[][] matrix = new double[numberOfLine][numberOfColumn];
 
         BufferedReader bufferedReader = new BufferedReader(fileReader);
         String currentLine;
         int indexOfLine = 0;
-        while ((currentLine = bufferedReader.readLine()) != null) {
-            matrix[indexOfLine] = sequenceIntoArray(currentLine);
+        while (indexOfLine < numberOfLine && (currentLine = bufferedReader.readLine()) != null) {
+            matrix[indexOfLine] = sequenceIntoArray(currentLine, numberOfColumn);
             indexOfLine++;
         }
         return matrix;
@@ -79,10 +84,10 @@ public class Main {
      * @param currentLine sequence of double from input representing a row from matrix.
      * @return array of double representing a row from matrix.
      */
-    private static double[] sequenceIntoArray(String currentLine) {
+    private static double[] sequenceIntoArray(String currentLine, int numberOfColumn) {
         String[] arrInput = currentLine.split(" ");
-        double[] arrInteger = new double[arrInput.length];
-        for (int index = 0; index < arrInput.length; index++) {
+        double[] arrInteger = new double[numberOfColumn];
+        for (int index = 0; index < numberOfColumn; index++) {
             arrInteger[index] = Double.parseDouble(arrInput[index]);
         }
         return arrInteger;
