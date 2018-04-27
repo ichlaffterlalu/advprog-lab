@@ -45,8 +45,6 @@ public class Main {
             double[][] strassenMultiplicationResult =
                     MatrixOperation.strassenMatrixMultiForNonSquareMatrix(firstMatrix, secondMatrix);
             totalAllNanosStrassen += System.nanoTime() - initialNanosStrassen;
-
-            System.out.println("Testing iteration: " + (i + 1));
         }
 
         System.out.println("Average Basic: " + (totalAllNanosBasic/1000));

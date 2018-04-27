@@ -13,24 +13,81 @@ public class Main {
     public static void main(String[] args) throws IOException {
 
         int[] sequenceInput = convertInputFileToArray();
+        int[] backupArray = sequenceInput.clone();
 
-        //Searching Input Before Sorting
-        long totalNanosSearchBeforeSort = System.nanoTime();
-        int searchingResultBeforeSort = Finder.slowSearch(sequenceInput, 40738);
-        totalNanosSearchBeforeSort = System.nanoTime() - totalNanosSearchBeforeSort;
-        System.out.println("Searching Complete in " + totalNanosSearchBeforeSort + " nanosecond");
+        // Warmup iteration for search
+        for (int i = 0; i < 1000; i++) {
+            //Searching Input Before Sorting using Slow Search
+            Finder.slowSearch(sequenceInput, 40738);
+            //Searching Input Before Sorting using Quick Search (not too quick)
+            Finder.quickSearch(sequenceInput, 40738);
+        }
 
-        //Sorting Input
-        long totalNanosSorting = System.nanoTime();
-        int[] sortedInput = Sorter.slowSort(sequenceInput);
-        totalNanosSorting = System.nanoTime() - totalNanosSorting;
-        System.out.println("Sorting Complete in " + totalNanosSorting + " nanosecond");
+        // Test iteration for search
+        long totalAllNanosSlow = 0;
+        long totalAllNanosQuick = 0;
+        for (int i = 0; i < 10000; i++) {
+            //Searching Input Before Sorting using Slow Search
+            long initialNanosSlow = System.nanoTime();
+            Finder.slowSearch(sequenceInput, 40738);
+            totalAllNanosSlow += System.nanoTime() - initialNanosSlow;
+
+            //Searching Input Before Sorting using Quick Search (not too quick)
+            long initialNanosQuick = System.nanoTime();
+            Finder.quickSearch(sequenceInput, 40738);
+            totalAllNanosQuick += System.nanoTime() - initialNanosQuick;
+        }
+
+        System.out.println("Average Slow Search: " + (totalAllNanosSlow/10000));
+        System.out.println("Average Quick Search: " + (totalAllNanosQuick/10000));
+
+        // Warmup iterations for sorting
+        for (int i = 0; i < 10; i++) {
+            //Sorting using Slow Sort
+            Sorter.slowSort(sequenceInput);
+            //Sorting using Quick Sort
+            Sorter.quickSort(sequenceInput);
+        }
+
+        totalAllNanosQuick = 0;
+        totalAllNanosSlow = 0;
+        // Test iterations for sorting
+        for (int i = 0; i < 100; i++) {
+            //Searching Input Before Sorting using Slow Search
+            long initialNanosSlow = System.nanoTime();
+            Sorter.slowSort(sequenceInput);
+            sequenceInput = backupArray.clone();
+            totalAllNanosSlow += System.nanoTime() - initialNanosSlow;
+
+            //Searching Input Before Sorting using Quick Search (not too quick)
+            long initialNanosQuick = System.nanoTime();
+            Sorter.quickSort(sequenceInput);
+            sequenceInput = backupArray.clone();
+            totalAllNanosQuick += System.nanoTime() - initialNanosQuick;
+        }
+
+        System.out.println("Average Slow Sort: " + (totalAllNanosSlow/100));
+        System.out.println("Average Quick Sort: " + (totalAllNanosQuick/100));
 
         //Searching Input After Sorting
-        long totalNanosSearchAfterSort = System.nanoTime();
-        int searchingResultAfterSort = Finder.slowSearch(sequenceInput, 40738);
-        totalNanosSearchAfterSort = System.nanoTime() - totalNanosSearchAfterSort;
-        System.out.println("Searching Complete in " + totalNanosSearchAfterSort + " nanosecond");
+        sequenceInput = Sorter.quickSort(sequenceInput);
+
+        // Warmup iteration for search
+        for (int i = 0; i < 1000; i++) {
+            //Searching Input After Sorting using Binary Search
+            Finder.binarySearch(sequenceInput, 40738);
+        }
+
+        // Test iteration for search
+        long totalAllNanosBinary = 0;
+        for (int i = 0; i < 10000; i++) {
+            //Searching Input After Sorting using Binary Search
+            long initialNanosBinary = System.nanoTime();
+            Finder.slowSearch(sequenceInput, 40738);
+            totalAllNanosSlow += System.nanoTime() - initialNanosBinary;
+        }
+
+        System.out.println("Average Binary Search: " + (totalAllNanosBinary/10000));
     }
 
     /**
