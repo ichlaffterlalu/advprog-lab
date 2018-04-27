@@ -60,7 +60,7 @@ public class Main {
      * @return 2 dimensional array of double representing matrix.
      * @throws IOException in the case of the file is not found because of the wrong path of file.
      */
-    private static double[][] convertInputFileToMatrix(String pathFile, int numberOfLine)
+    public static double[][] convertInputFileToMatrix(String pathFile, int numberOfLine)
             throws IOException {
         File matrixFile = new File(pathFile);
         FileReader fileReader = new FileReader(matrixFile);

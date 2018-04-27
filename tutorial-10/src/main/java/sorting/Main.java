@@ -38,7 +38,7 @@ public class Main {
      * @return an array of integer that represent an integer sequence.
      * @throws IOException in the case of the file is not found because of the wrong path of file.
      */
-    private static int[] convertInputFileToArray() throws IOException {
+    public static int[] convertInputFileToArray() throws IOException {
         File sortingProblemFile = new File(pathFile);
         FileReader fileReader = new FileReader(sortingProblemFile);
         int[] sequenceInput = new int[numberOfItemToBeSorted];
