@@ -114,38 +114,75 @@ provided by OS (e.g. time in Unix-based OS) or by measuring it directly in code
 
 ## Mandatory Tasks Checklist
 
-- [ ] Check and Optimizing Sorting Algorithm
-    - [ ] Check whether the currently used algorithm is optimal or not.
-    - [ ] Implement a better algorithm (if you think that the currently used algorithm
+- [x] Check and Optimizing Sorting Algorithm
+    - [x] Check whether the currently used algorithm is optimal or not.
+    - [x] Implement a better algorithm (if you think that the currently used algorithm
     is not optimal)
-    - [ ] Create a test case to check whether your algorithm is successfully 
+    - [x] Create a test case to check whether your algorithm is successfully 
     sort the sequence
-- [ ] Check and Optimizing Searching Algorithm
-    - [ ] Check whether the currently used algorithm is optimal or not.
-    - [ ] Implement a better algorithm (if you think that the currently used algorithm
+- [x] Check and Optimizing Searching Algorithm
+    - [x] Check whether the currently used algorithm is optimal or not.
+    - [x] Implement a better algorithm (if you think that the currently used algorithm
     is not optimal). You may combine the process by sorting the sequence first
     before searching.
-    - [ ] Create a test case to check whether your algorithm is successfully 
+    - [x] Create a test case to check whether your algorithm is successfully 
     search a speficic value in the sequence
-- [ ] Explain in [My Notes](#my-notes) section, whether the current benchmark
+- [x] Explain in [My Notes](#my-notes) section, whether the current benchmark
 test design is already good to measure the elapsed time of algorithm and explain why!
     - Hint: Recall how processes and threads are executed (from your OS course)
     and do research about how JVM runs and compiles Java code
-- [ ] Push your commits to online Git repository on your GitLab project
+- [x] Push your commits to online Git repository on your GitLab project
 
 ## Additional Tasks Checklist
 
-- [ ] Make sure there are no code style issues, both in production code and
+- [x] Make sure there are no code style issues, both in production code and
 test code
-- [ ] Refactor `convertInputFileToMatrix` to handle non-square matrix input
-- [ ] Provide Unit Test to check whether your implementation is correct
-- [ ] Define your benchmark test for basic and Strassen multiplication algorithm to measure
+- [x] Refactor `convertInputFileToMatrix` to handle non-square matrix input
+- [x] Provide Unit Test to check whether your implementation is correct
+- [x] Define your benchmark test for basic and Strassen multiplication algorithm to measure
 elapsed time.
-    - [ ] Explain why you decided to design your benchmark test as it is in My notes section.
-    - [ ] Report the result of your benchmark test in My notes section 
+    - [x] Explain why you decided to design your benchmark test as it is in My notes section.
+    - [x] Report the result of your benchmark test in My notes section 
 
 ## My Notes
 
 > Feel free to use this section to write your own notes related to your attempt
 > in doing the tutorial. You can also use this section to write text for
 > answering question(s) mentioned in the task checklists.
+
+### About Sorting Conventional Benchmark
+
+Benchmark yang dilakukan dengan cara membandingkan waktu mulai dengan waktu selesai ketika hanya
+dilakukan sekali saja itu belum representatif. Perlu diketahui bahwa JVM membutuhkan waktu untuk
+melakukan warmup, yaitu optimasi jalannya sebuah method. Dengan cara sekali hitung, JVM belum
+menemukan optimasi yang pas, sehingga waktu yang dicatat lebih lambat dari waktu optimal eksekusi.
+
+Selain itu, sebuah method tidak akan memiliki waktu eksekusi tetap karena tergantung pada keadaan
+komputer pada saat itu, dan proses-proses lain yang juga membutuhkan CPU time. Sehingga, perlu
+dilakukan sampling secara berulang agar hasilnya lebih akurat.
+
+### About My Own Benchmark
+
+Untuk menyelesaikan problem di atas, saya melakukan hal-hal berikut:
+
+1. Eksekusi method beberapa kali
+   (warmup 10 kali untuk sorting, 1000 kali untuk search, 100 kali untuk matriks.)
+   (eksekusi 10 kali lipat dari jumlah warmup)
+2. Set timer untuk bersiap menghitung.
+3. Selama timer berjalan, lakukan eksekusi method beberapa kali.
+4. Setelah dirasa cukup, hitung rata-rata waktu eksekusi.
+
+
+Dalam pelaksanaannya, hanya digunakan 1 threading karena program ini tidak mendukung multithreading.
+
+Berikut hasil yang didapatkan (dalam nanosecond):
+
+Average Basic Multiplication: 471030
+Average Strassen: 119505025
+
+Average Slow Search: 23740
+Average Quick Search: 23034
+Average Binary Search : 286 ns
+
+Average Slow Sort: 730317271
+Average Quick Sort: 4753215

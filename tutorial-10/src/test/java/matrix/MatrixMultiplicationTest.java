@@ -25,11 +25,6 @@ public class MatrixMultiplicationTest {
     }
 
     @Test
-    public void checkMainMethodWorksProperly() {
-        assertTrue(mainRunner());
-    }
-
-    @Test
     public void illegalMultiplicationTest() {
         boolean illegal = false;
         try {
@@ -38,17 +33,6 @@ public class MatrixMultiplicationTest {
             illegal = true;
         } finally {
             assertTrue(illegal);
-        }
-    }
-    
-    private static boolean mainRunner() {
-        boolean isOk = true;
-        try {
-            Main.main(null);
-        } catch (Exception e) {
-            isOk = false;
-        } finally {
-            return isOk;
         }
     }
 

@@ -25,11 +25,6 @@ public class SortAndSearchTest {
     }
 
     @Test
-    public void testMainMethodWorkProperly() throws Exception {
-        Main.main(null);
-    }
-
-    @Test
     public void testEachFinderFindCorrectly() {
         assertEquals(searchedValue, Finder.slowSearch(testArr1, searchedValue));
         assertEquals(searchedValue, Finder.quickSearch(testArr1, searchedValue));
