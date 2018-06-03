@@ -23,8 +23,8 @@
     <orderEntry type="library" scope="RUNTIME" name="Gradle: org.junit.vintage:junit-vintage-engine:5.1.0" level="project" />
     <orderEntry type="library" name="Gradle: org.springframework.boot:spring-boot-starter-tomcat:2.0.0.RELEASE" level="project" />
     <orderEntry type="library" name="Gradle: org.hibernate.validator:hibernate-validator:6.0.7.Final" level="project" />
-    <orderEntry type="library" scope="RUNTIME" name="Gradle: org.junit.platform:junit-platform-launcher:1.1.0" level="project" />
     <orderEntry type="library" name="Gradle: org.springframework:spring-webmvc:5.0.4.RELEASE" level="project" />
+    <orderEntry type="library" scope="RUNTIME" name="Gradle: org.junit.platform:junit-platform-launcher:1.1.0" level="project" />
     <orderEntry type="library" name="Gradle: org.springframework:spring-web:5.0.4.RELEASE" level="project" />
     <orderEntry type="library" name="Gradle: org.thymeleaf:thymeleaf-spring5:3.0.9.RELEASE" level="project" />
     <orderEntry type="library" name="Gradle: org.thymeleaf.extras:thymeleaf-extras-java8time:3.0.1.RELEASE" level="project" />
